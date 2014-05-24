@@ -435,3 +435,8 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+--{{{ AUTO START
+awful.util.spawn_with_shell("kuaipan4uk")
+awful.util.spawn_with_shell("google-chrome")
+--}}}
