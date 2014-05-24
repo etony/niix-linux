@@ -92,9 +92,10 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Debian", debian.menu.Debian_menu.Debian },
-                                    { "WPS", 'wps' },
-                                    { "open terminal", terminal }
+                                    { "Debian", debian.menu.Debian_menu.Debian, "/home/tony/.config/awesome/debian-swirl.xpm" },
+                                    { "WPS", 'wps', "/home/tony/.config/awesome/wps-office-doc.xpm" },
+                                    { "open terminal", terminal, "/home/tony/.config/awesome/terminal.xpm" }
+
                                   }
                         })
 
