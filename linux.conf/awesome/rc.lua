@@ -190,29 +190,23 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
         s == 1 and mysystray or nil,
-	  memwidget,
-	  cpuwidget,
-	  netwidget,
-	  fswidget,
+	  mmytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
 
    mywibox_bottom[s].widgets = {
       {
-	  cpufreq,
-uptime,
-mem,
-fs,
-dio,
-net,
-cpu,
-cpu_g1,
-cpu_g2,
-	  fswidget,
-        layout = awful.widget.layout.horizontal.leftright
+ 	cpu_g1,
+ 	fswidget,  
+ 	memwidget,
+ 	cpuwidget,
+ 	cpufreqwidget,
+ 	updatewidget,
+      layout = awful.widget.layout.horizontal.leftright
       },
-	  netwidget,
-	  fswidget,
+	  cpuwidget,
+   	  netwidget,
+
       layout = awful.widget.layout.horizontal.rightleft
    }
 
@@ -382,6 +376,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][2] } },
     { rule = { class = "Evince" },
       properties = { tag = tags[1][2] } },
+    { rule = { class = "libreoffice-" },
+      properties = { tag = tags[1][5] } },
     { rule = { class = "Google-chrome-beta" },
       properties = { tag = tags[1][3] } },
     { rule = { class = "Google-chrome" },
@@ -395,6 +391,8 @@ awful.rules.rules = {
     { rule = { class = "Nautilus" },
       properties = { tag = tags[1][5] } },
     { rule = { class = "Rox" },
+      properties = { tag = tags[1][5] } },
+    { rule = { class = "Thunar" },
       properties = { tag = tags[1][5] } },
     { rule = { class = "VirtualBox" },
       properties = { tag = tags[1][6] } },

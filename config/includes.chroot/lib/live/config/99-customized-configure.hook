@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+echo "###############Customized configure###############"
+
+
+chown -hR tony:tony /home/tony/.config
+
+chmod -R 755 /home/tony/.config
+
+
+
+

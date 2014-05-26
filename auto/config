@@ -1,0 +1,61 @@
+#!/bin/sh
+
+set -e
+
+case "$(dpkg --print-architecture)" in
+	amd64)
+		_LINUX_FLAVOURS="amd64"
+		_SOURCE="false"
+		;;
+
+	i386)
+		_LINUX_FLAVOURS="486 686-pae"
+		_SOURCE="false"
+		;;
+esac
+
+lb config noauto \
+	--clean \
+	--ignore-system-defaults \
+	--mode debian \
+	--linux-flavours "${_LINUX_FLAVOURS}" \
+	--linux-packages "linux-image linux-headers" \
+ 	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
+	--bootappend-live-failsafe "boot=live config quiet splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
+	--apt-indices false \
+        --parent-mirror-bootstrap "http://mirrors.sohu.com/debian/" \
+        --parent-mirror-chroot "http://mirrors.sohu.com/debian/" \
+        --parent-mirror-binary "http://mirrors.sohu.com/debian/" \
+        --parent-mirror-debian-installer "http://mirrors.sohu.com/debian/" \
+        --mirror-bootstrap "http://mirrors.sohu.com/debian/" \
+        --mirror-chroot "http://mirrors.sohu.com/debian/" \
+        --mirror-binary "http://mirrors.sohu.com/debian/" \
+        --mirror-debian-installer "http://mirrors.sohu.com/debian/" \
+        --mirror-bootstrap http://mirrors.sohu.com/debian/ \
+	--source "${_SOURCE}" \
+	--archive-areas "main contrib" \
+	--iso-volume "NiixLinux" \
+	--iso-publisher "Niix Linux Systems; etony.an@gmail.com" \
+	--iso-application "NiixLinux" \
+	--iso-preparer "NiixBuilder" \
+	--firmware-chroot false \
+	--memtest none \
+	--debootstrap-options "--variant=minbase" \
+	--debian-installer live \
+	--bootloader syslinux \
+"${@}"
+
+#	
+#       --distribution sid \
+#	--apt-recommends false \
+#	--debian-installer live \
+#	
+#        --parent-mirror-chroot-updates "http://mirrors.163.com/debian/" \
+#        --parent-mirror-chroot-backports "http://mirrors.163.com/debian/" \
+#        --mirror-binary-updates "http://mirrors.163.com/debian/" \
+#        --mirror-binary-backports "http://mirrors.163.com/debian/" \
+#        --mirror-chroot-updates "http://mirrors.163.com/debian/" \
+#        --mirror-chroot-backports "http://mirrors.163.com/debian/" \
+#        --parent-mirror-binary-updates "http://mirrors.163.com/debian/" \
+#        --parent-mirror-binary-backports "http://mirrors.163.com/debian/" \
+#	 --hooks "minimal" \

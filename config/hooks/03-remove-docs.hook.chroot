@@ -1,0 +1,76 @@
+#!/bin/sh
+
+set -e
+
+echo "###############remove unused packages###############"
+
+#for PACKAGE in apt-utils aptitude man-db manpages info wget openbox-themes manpages nano libg11-mesa-dri dselect libg11-mesa-dri iptables gnome-user-guide 
+#do
+#        if ! apt-get remove --purge --yes "${PACKAGE}"
+#        then
+#                echo "WARNING: ${PACKAGE} isn't installed"
+#        fi
+#done
+
+ 
+#上面将删除一些用不到的软件，man手册比较大
+ 
+apt-get -y autoremove
+apt-get -y clean 
+ 
+echo "###############remove temporary files###############" 
+rm -rf /var/cache/flash*
+#删除flash插件安装过程中下载的临时文件
+
+echo "###############remvoe all docs###############"
+rm -rf /usr/share/doc/*
+rm -rf /usr/share/doc-base/*
+#删除所有文档
+ 
+echo "###############remove all man docs###############"
+rm -rf /usr/share/man/*
+rm -rf /var/cache/man/*
+#删除自带的一些man文档
+ 
+echo "###############remove apt lists###############"
+rm -rf /var/lib/apt/lists/*
+ 
+echo "###############remove apt cache###############"
+rm -rf /var/cache/apt/*.bin
+#删除apt缓存
+ 
+echo "remove localization information"
+
+locale-gen
+ 
+if cd /usr/share/locale;then
+ls -1|grep -v zh_CN|grep -v locale|xargs rm -rf "{}"
+fi
+ 
+#删除除了zh_CN之外的所有本地化信息
+ 
+echo "###############remove some driver###############"
+rm -rf /lib/modules/*/kernel/drivers/isdn
+rm -rf /lib/modules/*/kernel/drivers/media
+#删除不常用的驱动
+
+echo "###############personalization configure###############"
+
+rm -rf /usr/share/xfce4/backdrops/*
+
+mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
+
+mkdir -p /home/tony/.config/awesome/
+
+mv /TOOLS/config/rc.lua /home/tony/.config/awesome/
+
+mv /TOOLS/config/mywidget.lua /home/tony/.config/awesome/
+
+#chown -hR tony:tony /home/tony/.config
+
+chmod -R 777 /home/tony/.config
+
+#刷新字体
+fc-cache -fv
+
+

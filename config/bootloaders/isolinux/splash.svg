@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="640"
+   height="480"
+   id="svg3320"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="splash.svg">
+  <defs
+     id="defs3322">
+    <linearGradient
+       id="linearGradient5012">
+      <stop
+         id="stop5014"
+         offset="0"
+         style="stop-color:#fdf188;stop-opacity:1;" />
+      <stop
+         id="stop5016"
+         offset="1"
+         style="stop-color:#d3bc00;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient8543">
+      <stop
+         id="stop8545"
+         offset="0"
+         style="stop-color:#fffef5;stop-opacity:0.94117647;" />
+      <stop
+         id="stop8547"
+         offset="1"
+         style="stop-color:#fce94f;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient11202">
+      <stop
+         id="stop11204"
+         offset="0"
+         style="stop-color:#c4a000;stop-opacity:1;" />
+      <stop
+         id="stop11206"
+         offset="1"
+         style="stop-color:#c4a000;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient18284">
+      <stop
+         id="stop18286"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0.5"
+         id="stop20913" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop19165" />
+    </linearGradient>
+    <inkscape:perspective
+       id="perspective47"
+       inkscape:persp3d-origin="24 : 16 : 1"
+       inkscape:vp_z="48 : 24 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 24 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.775"
+     inkscape:cx="234.33275"
+     inkscape:cy="302.45627"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3325">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-572.3622)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3328"
+       width="640"
+       height="480"
+       x="0"
+       y="572.36218" />
+    <text
+       transform="scale(1.0000015,0.9999985)"
+       sodipodi:linespacing="100%"
+       id="text3002"
+       y="657.91663"
+       x="256.42328"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       xml:space="preserve"><tspan
+         y="657.91663"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:14px;font-style:normal;font-weight:bold;fill:#cccccc;-inkscape-font-specification:DejaVu Sans Bold"
+         id="tspan3041">@PROJECT@ @VERSION@ (@DISTRIBUTION@) @ARCHITECTURE@</tspan><tspan
+         y="671.91663"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:16px;font-style:normal;font-weight:bold;fill:#cccccc;-inkscape-font-specification:DejaVu Sans Bold"
+         id="tspan3037" /><tspan
+         y="685.91663"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:14px;font-style:normal;font-weight:bold;fill:#cccccc;-inkscape-font-specification:DejaVu Sans Bold"
+         id="tspan3098">内核: @LINUX_VERSIONS@</tspan><tspan
+         y="701.0918"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:16px;font-style:normal;font-weight:bold;fill:#cccccc;-inkscape-font-specification:DejaVu Sans Bold"
+         id="tspan3176" /><tspan
+         y="716.26697"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:14px;font-style:normal;font-weight:bold;fill:#cccccc;-inkscape-font-specification:DejaVu Sans Bold"
+         id="tspan3174">创建于: @YEAR@-@MONTH@-@DAY@  @HOUR@:@MINUTE@:@SECOND@</tspan><tspan
+         y="731.44214"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:16px;font-style:normal;font-weight:bold;fill:#cccccc;-inkscape-font-specification:DejaVu Sans Bold"
+         id="tspan3158" /><tspan
+         y="746.61731"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:16px;font-style:normal;font-weight:normal;fill:#cccccc;-inkscape-font-specification:DejaVu Sans"
+         id="tspan3102" /><tspan
+         y="761.79248"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:16px;font-style:normal;font-weight:normal;-inkscape-font-specification:DejaVu Sans"
+         id="tspan3012" /><tspan
+         y="776.96765"
+         x="256.42328"
+         sodipodi:role="line"
+         style="font-size:16px;font-style:normal;font-weight:normal;-inkscape-font-specification:DejaVu Sans"
+         id="tspan3066" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="200"
+       y="336.7742"
+       id="text3114"
+       sodipodi:linespacing="125%"
+       transform="translate(0,572.3622)"><tspan
+         sodipodi:role="line"
+         id="tspan3116" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:46.3020401px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-91.763428"
+       y="573.79224"
+       id="text3160"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.86867111,-0.01329314,0.17037761,1.1485764,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3162"
+         x="-91.763428"
+         y="573.79224"
+         style="font-size:83.34367371px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;letter-spacing:5.78775501px;fill:#cccccc;font-family:URW Chancery L;-inkscape-font-specification:URW Chancery L Bold Italic">Niix</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3038"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3040"><rect
+           id="rect3042"
+           width="202.58064"
+           height="45.161289"
+           x="2.5806451"
+           y="41.290321" /></flowRegion><flowPara
+         id="flowPara3044" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="160"
+       y="608.49121"
+       id="text3015"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3017"
+         x="160"
+         y="608.49121"
+         style="font-size:32px;font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:URW Chancery L;-inkscape-font-specification:URW Chancery L Medium Italic">lalagu</tspan></text>
+  </g>
+</svg>
