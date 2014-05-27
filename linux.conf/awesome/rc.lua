@@ -9,6 +9,7 @@ require("beautiful")
 require("naughty")
 require("vicious")
 require("mywidget")
+local menu = require("menu")
 
 
 -- Load Debian menu entries
@@ -93,9 +94,10 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Debian", debian.menu.Debian_menu.Debian, "/home/tony/.config/awesome/debian-swirl.xpm" },
-                                    { "WPS", 'wps', "/home/tony/.config/awesome/wps-office-doc.xpm" },
-                                    { "open terminal", terminal, "/home/tony/.config/awesome/terminal.xpm" }
-
+--                                    { "WPS", 'wps', "/home/tony/.config/awesome/wps-office-doc.xpm" },
+			            { "应用程序 (&A)", xdgmenu(terminal),"/usr/share/icons/gnome/16x16/devices/system.png" },
+--                                    { "open terminal", terminal, "/home/tony/.config/awesome/terminal.xpm" },
+				    { "关机 (&H)", "zenity --question --title '关机' --text '你确定关机吗?' --default-no && systemctl poweroff", '/usr/share/icons/gnome/16x16/actions/gnome-logout.png' }
                                   }
                         })
 
@@ -440,5 +442,4 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 
 --{{{ AUTO START
 awful.util.spawn_with_shell("kuaipan4uk")
-awful.util.spawn_with_shell("google-chrome")
 --}}}
