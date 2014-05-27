@@ -190,7 +190,7 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
         s == 1 and mysystray or nil,
-	mytasklist[s],
+	  mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
 
@@ -202,11 +202,10 @@ for s = 1, screen.count() do
  	cpuwidget,
  	cpufreqwidget,
  	updatewidget,
-      layout = awful.widget.layout.horizontal.leftright
+        layout = awful.widget.layout.horizontal.leftright
       },
 	  cpuwidget,
    	  netwidget,
-
       layout = awful.widget.layout.horizontal.rightleft
    }
 
@@ -370,6 +369,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "X-terminal-emulator" },
       properties = { tag = tags[1][1] } },
+    { rule = { class = "Roxterm" },
+      properties = { tag = tags[1][1] } },
     { rule = { class = "Wps" },
       properties = { tag = tags[1][2] } },
     { rule = { class = "Leafpad" },
@@ -377,10 +378,12 @@ awful.rules.rules = {
     { rule = { class = "Evince" },
       properties = { tag = tags[1][2] } },
     { rule = { class = "libreoffice-" },
-      properties = { tag = tags[1][5] } },
+      properties = { tag = tags[1][2] } },
     { rule = { class = "Google-chrome-beta" },
       properties = { tag = tags[1][3] } },
     { rule = { class = "Google-chrome" },
+      properties = { tag = tags[1][3] } },
+    { rule = { class = "X-www-browser" },
       properties = { tag = tags[1][3] } },
     { rule = { class = "Iceweasel" },
       properties = { tag = tags[1][3] } },
@@ -390,7 +393,7 @@ awful.rules.rules = {
       properties = { tag = tags[1][4] } },
     { rule = { class = "Nautilus" },
       properties = { tag = tags[1][5] } },
-    { rule = { class = "Rox" },
+    { rule = { class = "Rox-filer" },
       properties = { tag = tags[1][5] } },
     { rule = { class = "Thunar" },
       properties = { tag = tags[1][5] } },
