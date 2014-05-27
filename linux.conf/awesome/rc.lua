@@ -190,7 +190,7 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
         s == 1 and mysystray or nil,
-	  mmytasklist[s],
+	mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
 
