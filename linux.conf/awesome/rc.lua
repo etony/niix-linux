@@ -95,9 +95,9 @@ myawesomemenu = {
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Debian", debian.menu.Debian_menu.Debian, "/home/tony/.config/awesome/debian-swirl.xpm" },
 --                                    { "WPS", 'wps', "/home/tony/.config/awesome/wps-office-doc.xpm" },
-			            { "应用程序 (&A)", xdgmenu(terminal),"/usr/share/icons/gnome/16x16/devices/system.png" },
+			            { "应用程序", xdgmenu(terminal),"/usr/share/icons/gnome/16x16/devices/system.png" },
 --                                    { "open terminal", terminal, "/home/tony/.config/awesome/terminal.xpm" },
-				    { "关机 (&H)", "zenity --question --title '关机' --text '你确定关机吗?' --default-no && systemctl poweroff", '/usr/share/icons/gnome/16x16/actions/gnome-logout.png' }
+				    { "关机 (&H)", "zenity --question --title '关机' --text '你确定关机吗?'   &&  sudo poweroff", '/usr/share/icons/gnome/16x16/actions/gnome-logout.png' }
                                   }
                         })
 
@@ -380,6 +380,8 @@ awful.rules.rules = {
     { rule = { class = "Evince" },
       properties = { tag = tags[1][2] } },
     { rule = { class = "libreoffice-" },
+      properties = { tag = tags[1][2] } },
+    { rule = { class = "Haroopad" },
       properties = { tag = tags[1][2] } },
     { rule = { class = "Google-chrome-beta" },
       properties = { tag = tags[1][3] } },
