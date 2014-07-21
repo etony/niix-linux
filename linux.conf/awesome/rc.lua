@@ -1,5 +1,4 @@
 -- Standard awesome library
-
 require("awful")
 require("awful.autofocus")
 require("awful.rules")
@@ -42,7 +41,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/wombat/theme.lua")
+beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -59,18 +58,11 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    --awful.layout.suit.tile.left,
+    awful.layout.suit.tile,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.floating,
-    awful.layout.suit.tile,
-    --awful.layout.suit.tile.top,
-    --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.spiral,
-    --awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    --awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    awful.layout.suit.magnifier,
+    awful.layout.suit.max
 }
 -- }}}
 
@@ -90,14 +82,15 @@ myawesomemenu = {
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
+
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Debian", debian.menu.Debian_menu.Debian, "/home/tony/.config/awesome/debian-swirl.xpm" },
---                                    { "WPS", 'wps', "/home/tony/.config/awesome/wps-office-doc.xpm" },
-			            { "应用程序", xdgmenu(terminal),"/usr/share/icons/gnome/16x16/devices/system.png" },
---                                    { "open terminal", terminal, "/home/tony/.config/awesome/terminal.xpm" },
-				    { "关机 (&H)", "zenity --question --title '关机' --text '你确定关机吗?'   &&  sudo poweroff", '/usr/share/icons/gnome/16x16/actions/gnome-logout.png' }
+                                    { "Debian", debian.menu.Debian_menu.Debian, "/usr/share/icons/gnome/16x16/places/debian-swirl.png"  },
+                                    { "open terminal", terminal },
+                                    	     { "应用程序", xdgmenu(terminal),"/usr/share/icons/gnome/16x16/devices/system.png" },
+                                    { "Chrome(proxy)", '/TOOLS/chrome-proxy', '/usr/share/icons/hicolor/16x16/apps/google-chrome.png' },
+					     { "关机 (&H)", '/home/tony/.config/awesome/shutdown.sh', '/usr/share/icons/gnome/16x16/actions/gnome-logout.png' }
                                   }
                         })
 
@@ -180,39 +173,36 @@ for s = 1, screen.count() do
     -- Create the wibox
     mywibox[s] = awful.wibox({ position = "top", screen = s })
     mywibox_bottom[s] = awful.wibox({ position = "bottom", screen = s })
+
     -- Add widgets to the wibox - order matters
     mywibox[s].widgets = {
-        {            
+        {
             mylauncher,
             mytaglist[s],
             mypromptbox[s],
             layout = awful.widget.layout.horizontal.leftright
-
         },
         mylayoutbox[s],
         mytextclock,
         s == 1 and mysystray or nil,
-	  mytasklist[s],
+        mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
 
    mywibox_bottom[s].widgets = {
       {
- 	cpu_g1,
- 	fswidget,  
- 	memwidget,
- 	cpuwidget,
- 	cpufreqwidget,
- 	updatewidget,
+	cpu_g1,
+	fswidget,  
+	memwidget,
+	cpuwidget,
+	cpufreqwidget,
+	updatewidget,
         layout = awful.widget.layout.horizontal.leftright
       },
-	  cpuwidget,
-   	  netwidget,
+	cpuwidget,
+	netwidget,
       layout = awful.widget.layout.horizontal.rightleft
    }
-
-
-
 
 end
 -- }}}
@@ -369,19 +359,22 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
+    -- Set Firefox to always map on tags number 2 of screen 1.
+    -- { rule = { class = "Firefox" },
+    --   properties = { tag = tags[1][2] } },
     { rule = { class = "X-terminal-emulator" },
       properties = { tag = tags[1][1] } },
     { rule = { class = "Roxterm" },
       properties = { tag = tags[1][1] } },
     { rule = { class = "Wps" },
       properties = { tag = tags[1][2] } },
+    { rule = { class = "libreoffice-" },
+      properties = { tag = tags[1][2] } },
     { rule = { class = "Leafpad" },
       properties = { tag = tags[1][2] } },
     { rule = { class = "Evince" },
       properties = { tag = tags[1][2] } },
-    { rule = { class = "libreoffice-" },
-      properties = { tag = tags[1][2] } },
-    { rule = { class = "Haroopad" },
+    { rule = { class = "Mdcharm" },
       properties = { tag = tags[1][2] } },
     { rule = { class = "Google-chrome-beta" },
       properties = { tag = tags[1][3] } },
@@ -403,11 +396,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][5] } },
     { rule = { class = "VirtualBox" },
       properties = { tag = tags[1][6] } },
-
-    --SmplayerGimp
-    -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+    { rule = { class = "Goagent-gtk.py" },
+      properties = { tag = tags[1][6] } },
 }
 -- }}}
 
@@ -438,10 +428,10 @@ client.add_signal("manage", function (c, startup)
     end
 end)
 
+
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
 --{{{ AUTO START
-awful.util.spawn_with_shell("kuaipan4uk")
+awful.util.spawn_with_shell("leafpad")
 --}}}
