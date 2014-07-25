@@ -14,8 +14,8 @@ xdgmenu = function(terminal)
 	{'Evince', '/usr/bin/evince', '/usr/share/icons/hicolor/16x16/apps/evince.png' },
       }
     }, {'系统工具',  {
-        {'Gparted', '/usr/sbin/gparted-pkexec', '/usr/share/icons/hicolor/16x16/apps/gparted.png' },
-        {'clonezilla', '/usr/sbin/gparted-pkexec' },
+        {'Gparted', 'sudo /usr/sbin/gparted', '/usr/share/icons/hicolor/16x16/apps/gparted.png' },
+        {'Clonezilla', 'sudo roxtrem -e clonezilla' },
 	  {'Thunar', '/usr/bin/thunar', '/usr/share/icons/hicolor/16x16/stock/navigation/stock_thunar-shortcuts.png' },
         {'Rox Filer', '/usr/bin/rox-filer' },
 
