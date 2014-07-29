@@ -5,6 +5,9 @@ live-tools
 
 ##########################################
 ###X11###
+#gdm3
+lightdm
+
 
 #task-xfce-desktop
 
@@ -45,9 +48,10 @@ fcitx-pinyin
 #mlterm 
 #rxvt-ml
 roxterm
-gnome-icon-theme
-vim-gtk
-nano
+#gnome-icon-theme
+#vim-gtk
+#nano
+vim
 leafpad
 evince
 less
@@ -68,12 +72,13 @@ links2
 w3m
 python3
 python-vte
+python-openssl
 
 gparted
 parted
 bc
 net-tools
-gdm3
+
 
 #clonezilla
 #drbl
