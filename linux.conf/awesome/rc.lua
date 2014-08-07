@@ -8,6 +8,7 @@ require("beautiful")
 require("naughty")
 require("vicious")
 require("mywidget")
+require("volume")
 local menu = require("menu")
 
 
@@ -201,6 +202,7 @@ for s = 1, screen.count() do
       },
 	cpuwidget,
 	netwidget,
+	volume_widget,
       layout = awful.widget.layout.horizontal.rightleft
    }
 
@@ -262,6 +264,13 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
+
+
+    -- volume control
+    awful.key({ modkey, "Shift"   }, "u",      function () awful.util.spawn("amixer set Master 9%+") end),
+    awful.key({ modkey, "Shift"   }, "d",      function () awful.util.spawn("amixer set Master 9%-") end),
+    awful.key({ modkey, "Shift"   }, "m",      function () awful.util.spawn("amixer sset Master toggle") end),
+
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
