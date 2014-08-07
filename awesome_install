@@ -1,0 +1,199 @@
+ 窗口管理器——Awesome 
+http://blog.chinaunix.net/uid-74892-id-4265223.html
+
+1. apt-get install gdm3 awesome
+
+2. /usr/share/xsessions/awesome.desktop
+
+注: /usr/share/xsessions/为 gdm3 的会话菜单目录
+
+点击(此处)折叠或打开
+[Desktop Entry]
+Encoding=UTF-8
+Name=awesome
+Comment=Highly configurable framework window manager
+NoDisplay=true  --> false
+TryExec=awesome
+Exec=awesome
+Type=Application
+3. mkdir  ~/.config/awesome 
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
+~/.config/awesome/rc.lua
+
+点击(此处)折叠或打开
+
+-- Load Debian menu entries
+require("debian.menu")
+-- 载入菜单文件
+
+
+
+点击(此处)折叠或打开
+-- {{{ Variable definitions
+-- Themes define colours, icons, and wallpapers
+beautiful.init("/usr/share/awesome/themes/wombat/theme.lua")
+--指定主题
+
+点击(此处)折叠或打开
+modkey = "Mod4"
+-- 定义[win] 为功能键
+
+
+点击(此处)折叠或打开
+-- Table of layouts to cover with awful.layout.inc, order matters.
+--定义布局
+layouts =
+{
+awful.layout.suit.floating, --浮动
+awful.layout.suit.tile,
+awful.layout.suit.tile.left,
+awful.layout.suit.tile.bottom,
+awful.layout.suit.tile.top,
+awful.layout.suit.fair,
+awful.layout.suit.fair.horizontal,
+awful.layout.suit.spiral,
+awful.layout.suit.spiral.dwindle,
+awful.layout.suit.max,
+awful.layout.suit.max.fullscreen,
+awful.layout.suit.magnifier
+}
+
+
+点击(此处)折叠或打开
+-- {{{ Tags
+-- Define a tag table which hold all screen tags.
+tags = {}
+for s = 1, screen.count() do
+-- Each screen has its own tag table.
+tags[s] = awful.tag({ '1|模拟终端 ', '2|文本编辑 ', '3|网络浏览 ', '4|媒体浏览 ', '5|文件管理 ', '6|其他操作 ' }, s, layouts[1])
+--指定标签（虚拟桌面之）名称
+end
+-- }}}
+
+点击(此处)折叠或打开
+-- 定义菜单
+-- {{{ Menu
+-- Create a laucher widget and a main menu
+myawesomemenu = {
+{ "manual", terminal .. " -e man awesome" },
+{ "edit config", editor_cmd .. " " .. awesome.conffile },
+{ "restart", awesome.restart },
+{ "quit", awesome.quit }
+}
+mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+{ "Debian", debian.menu.Debian_menu.Debian },
+{ "WPS", 'wps' },
+{ "open terminal", terminal }
+}
+})
+mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
+menu = mymainmenu })
+-- }}}
+
+
+点击(此处)折叠或打开
+-- {{{ Rules
+awful.rules.rules = {
+-- All clients will match this rule.
+{ rule = { },
+properties = { border_width = beautiful.border_width,
+border_color = beautiful.border_normal,
+focus = true,
+keys = clientkeys,
+buttons = clientbuttons } },
+{ rule = { class = "MPlayer" },
+properties = { floating = true } },
+{ rule = { class = "pinentry" },
+properties = { floating = true } },
+{ rule = { class = "gimp" },
+properties = { floating = true } },
+{ rule = { class = "X-terminal-emulator" },
+properties = { tag = tags[1][1] } },
+{ rule = { class = "Wps" },
+properties = { tag = tags[1][2] } },
+{ rule = { class = "Leafpad" },
+properties = { tag = tags[1][2] } },
+{ rule = { class = "Evince" },
+properties = { tag = tags[1][2] } },
+{ rule = { class = "Google-chrome-beta" },
+properties = { tag = tags[1][3] } },
+{ rule = { class = "Google-chrome" },
+properties = { tag = tags[1][3] } },
+{ rule = { class = "Iceweasel" },
+properties = { tag = tags[1][3] } },
+{ rule = { class = "Smplayer" },
+properties = { tag = tags[1][4] } },
+{ rule = { class = "Gimp" },
+properties = { tag = tags[1][4] } },
+{ rule = { class = "Nautilus" },
+properties = { tag = tags[1][5] } },
+{ rule = { class = "Rox" },
+properties = { tag = tags[1][5] } },
+{ rule = { class = "VirtualBox" },
+properties = { tag = tags[1][6] } },
+--设置特定程序在指定标签打开
+--程序CLASS 获取 xprop
+--tags[屏幕序号][标签序号需]
+--SmplayerGimp
+-- Set Firefox to always map on tags number 2 of screen 1.
+-- { rule = { class = "Firefox" },
+-- properties = { tag = tags[1][2] } },
+}
+-- }}}
+4. 更换背景 theme.lua
+
+点击(此处)折叠或打开
+theme.wallpaper_cmd = { "awsetbg /usr/share/awesome/themes/default/background.png" }
+
+5. 自定义插件
+
+~/.config/awesome/rc.lua
+点击(此处)折叠或打开
+-- Standard awesome library
+require("awful")
+require("awful.autofocus")
+require("awful.rules")
+-- Theme handling library
+require("beautiful")
+-- Notification library
+require("naughty")
+require("vicious")
+require("mywidger")
+点击(此处)折叠或打开
+mywibox[s].widgets = {
+{
+mylauncher,
+mytaglist[s],
+mypromptbox[s],
+layout = awful.widget.layout.horizontal.leftright
+},
+mylayoutbox[s],
+mytextclock,
+s == 1 and mysystray or nil,
+memwidget,
+cpuwidget,
+netwidget,
+layout = awful.widget.layout.horizontal.rightleft
+}
+
+~/.config/awesome/mywidger.lua
+点击(此处)折叠或打开
+-- Initialize widget
+memwidget = widget({ type = "textbox" })
+-- Register widget
+vicious.register(memwidget, vicious.widgets.mem, "mem: $1% ($2MB/$3MB)", 13)
+-- Initialize widget
+cpuwidget = widget({ type = "textbox" })
+-- Register widget
+vicious.register(cpuwidget, vicious.widgets.cpu, "CPU:$1%")
+--NET
+netwidget = widget({ type = "textbox" })
+vicious.register(netwidget, vicious.widgets.net, ' <span color="brown">NET: <span color="orange">${eth0 down_kb}KB/${eth0 up_kb}KB', 1)
+6. 自动启动
+~/.config/awesome/rc.lua
+
+点击(此处)折叠或打开
+--{{{ AUTO START
+awful.util.spawn_with_shell("kuaipan4uk")
+awful.util.spawn_with_shell("google-chrome")
+--}}}
