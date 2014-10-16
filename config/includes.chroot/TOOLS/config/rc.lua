@@ -8,7 +8,7 @@ require("beautiful")
 require("naughty")
 require("vicious")
 require("mywidget")
-
+local menu = require("menu")
 
 
 -- Load Debian menu entries
@@ -53,7 +53,7 @@ editor_cmd = terminal .. " -e " .. editor
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod1"
+modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
@@ -86,11 +86,11 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Debian", debian.menu.Debian_menu.Debian },
+                                    { "Debian", debian.menu.Debian_menu.Debian, "/usr/share/icons/gnome/16x16/places/debian-swirl.png"  },
                                     { "open terminal", terminal },
-                                    { "Wps", 'wps' },
-                                    { "Chrome(proxy)", '/TOOLS/chrome-proxy' },
-                                    { "Chrome", 'google-chrome' }
+                                    	     { "应用程序", xdgmenu(terminal),"/usr/share/icons/gnome/16x16/devices/system.png" },
+                                    { "Chrome(proxy)", '/TOOLS/chrome-proxy', '/usr/share/icons/hicolor/16x16/apps/google-chrome.png' },
+					     { "关机 (&H)", '/home/tony/.config/awesome/shutdown.sh', '/usr/share/icons/gnome/16x16/actions/gnome-logout.png' }
                                   }
                         })
 
@@ -364,6 +364,8 @@ awful.rules.rules = {
     --   properties = { tag = tags[1][2] } },
     { rule = { class = "X-terminal-emulator" },
       properties = { tag = tags[1][1] } },
+    { rule = { class = "Roxterm" },
+      properties = { tag = tags[1][1] } },
     { rule = { class = "Wps" },
       properties = { tag = tags[1][2] } },
     { rule = { class = "libreoffice-" },
@@ -372,9 +374,13 @@ awful.rules.rules = {
       properties = { tag = tags[1][2] } },
     { rule = { class = "Evince" },
       properties = { tag = tags[1][2] } },
+    { rule = { class = "Mdcharm" },
+      properties = { tag = tags[1][2] } },
     { rule = { class = "Google-chrome-beta" },
       properties = { tag = tags[1][3] } },
     { rule = { class = "Google-chrome" },
+      properties = { tag = tags[1][3] } },
+    { rule = { class = "X-www-browser" },
       properties = { tag = tags[1][3] } },
     { rule = { class = "Iceweasel" },
       properties = { tag = tags[1][3] } },
@@ -384,7 +390,7 @@ awful.rules.rules = {
       properties = { tag = tags[1][4] } },
     { rule = { class = "Nautilus" },
       properties = { tag = tags[1][5] } },
-    { rule = { class = "Rox" },
+    { rule = { class = "Rox-filer" },
       properties = { tag = tags[1][5] } },
     { rule = { class = "Thunar" },
       properties = { tag = tags[1][5] } },
@@ -426,3 +432,6 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+--{{{ AUTO START
+awful.util.spawn_with_shell("leafpad")
+--}}}

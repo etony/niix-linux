@@ -20,18 +20,18 @@ lb config noauto \
 	--mode debian \
 	--linux-flavours "${_LINUX_FLAVOURS}" \
 	--linux-packages "linux-image linux-headers" \
- 	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
+ 	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox" \
 	--bootappend-live-failsafe "boot=live config quiet splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
 	--apt-indices false \
-        --parent-mirror-bootstrap "http://mirrors.sohu.com/debian/" \
-        --parent-mirror-chroot "http://mirrors.sohu.com/debian/" \
-        --parent-mirror-binary "http://mirrors.sohu.com/debian/" \
-        --parent-mirror-debian-installer "http://mirrors.sohu.com/debian/" \
-        --mirror-bootstrap "http://mirrors.sohu.com/debian/" \
-        --mirror-chroot "http://mirrors.sohu.com/debian/" \
-        --mirror-binary "http://mirrors.sohu.com/debian/" \
-        --mirror-debian-installer "http://mirrors.sohu.com/debian/" \
-        --mirror-bootstrap http://mirrors.sohu.com/debian/ \
+        --parent-mirror-bootstrap "http://ftp.tw.debian.org/debian/" \
+        --parent-mirror-chroot "http://ftp.tw.debian.org/debian/" \
+        --parent-mirror-binary "http://ftp.tw.debian.org/debian/" \
+        --parent-mirror-debian-installer "http://ftp.tw.debian.org/debian/" \
+        --mirror-bootstrap "http://ftp.tw.debian.org/debian/" \
+        --mirror-chroot "http://ftp.tw.debian.org/debian/" \
+        --mirror-binary "http://ftp.tw.debian.org/debian/" \
+        --mirror-debian-installer "http://ftp.tw.debian.org/debian/" \
+        --mirror-bootstrap http://ftp.tw.debian.org/debian/ \
 	--source "${_SOURCE}" \
 	--archive-areas "main contrib" \
 	--iso-volume "NiixLinux" \
@@ -50,12 +50,15 @@ lb config noauto \
 #	--apt-recommends false \
 #	--debian-installer live \
 #	
-#        --parent-mirror-chroot-updates "http://mirrors.163.com/debian/" \
-#        --parent-mirror-chroot-backports "http://mirrors.163.com/debian/" \
-#        --mirror-binary-updates "http://mirrors.163.com/debian/" \
-#        --mirror-binary-backports "http://mirrors.163.com/debian/" \
-#        --mirror-chroot-updates "http://mirrors.163.com/debian/" \
-#        --mirror-chroot-backports "http://mirrors.163.com/debian/" \
-#        --parent-mirror-binary-updates "http://mirrors.163.com/debian/" \
-#        --parent-mirror-binary-backports "http://mirrors.163.com/debian/" \
+#        --parent-mirror-chroot-updates "http://mirrors.sohu.com/debian/" \
+#        --parent-mirror-chroot-backports "http://debian.ustc.edu.cn/debian/" \
+#        --mirror-binary-updates "http://debian.ustc.edu.cn/debian/" \
+#        --mirror-binary-backports "http://debian.ustc.edu.cn/debian/" \
+#        --mirror-chroot-updates "http://debian.ustc.edu.cn/debian/" \
+#        --mirror-chroot-backports "http://debian.ustc.edu.cn/debian/" \
+#        --parent-mirror-binary-updates "http://debian.ustc.edu.cn/debian/" \
+#        --parent-mirror-binary-backports "http://debian.ustc.edu.cn/debian/" \
 #	 --hooks "minimal" \
+#	debian.ustc.edu.cn
+#	mirrors.sohu.com
+#ftp.tw.debian.org

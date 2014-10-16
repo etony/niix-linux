@@ -60,11 +60,13 @@ rm -rf /usr/share/xfce4/backdrops/*
 
 mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
 
-mkdir -p /home/tony/.config/awesome/
+# mkdir -p /home/tony/.config/awesome/
+#mv /TOOLS/config/* /home/tony/.config/awesome/
 
-mv /TOOLS/config/rc.lua /home/tony/.config/awesome/
 
-mv /TOOLS/config/mywidget.lua /home/tony/.config/awesome/
+mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
+
+mv /TOOLS/xfce4-desktop.xml  /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 #chown -hR tony:tony /home/tony/.config
 

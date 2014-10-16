@@ -12,29 +12,24 @@ lightdm
 #task-xfce-desktop
 
 ## xfce4 desktop
-#xfdesktop4
-#xfce4-panel
+xfdesktop4
+xfce4-panel
 
-#xfce4-screenshooter
-#xfce4-session
+xfce4-screenshooter
+xfce4-session
 thunar
 
 #AweSome
-awesome
-awesome-extra
+#awesome
+#awesome-extra
 
 
-#openbox
 ## fluxbox desktop
 #xorg
 #fluxbox
-
+#openbox
 #lxde-core
-#xfce4-utils
-#xfce4
-#awesome
-#awesome-extra
-#blackbox
+
 
 xdg-utils
 xfonts-wqy
@@ -166,14 +161,13 @@ xdg-utils
 dpkg
 
 ###kingsoft-office 
-libstdc++6
-libfreetype6
-libglu1-mesa
-libcups2
-libglib2.0-0
-libsm6
-libxrender1
-libfontconfig1
-
-libcairo2
-libcap2
+#libstdc++6
+#libfreetype6
+#libglu1-mesa
+#libcups2
+#libglib2.0-0
+#libsm6
+#libxrender1
+#libfontconfig1
+#libcairo2
+#libcap2
