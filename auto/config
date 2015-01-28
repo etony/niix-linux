@@ -9,7 +9,7 @@ case "$(dpkg --print-architecture)" in
 		;;
 
 	i386)
-		_LINUX_FLAVOURS="686-pae"
+		_LINUX_FLAVOURS="586 686-pae"
 		_SOURCE="false"
 		;;
 esac
