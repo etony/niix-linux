@@ -64,7 +64,7 @@ try:
 except ImportError:
     sys.stderr.write('\033[31m  Warning: Please update gevent to the latest 1.0 version!\033[0m\n')
 
-sys.path += ['python27.zip']
+sys.path += ['packages.egg/noarch']
 import ntlmaps
 serv = ntlmaps.server.AuthProxyServer(ntlmaps.config_affairs.arrange(conf))
 serv.run()

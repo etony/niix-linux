@@ -9,7 +9,7 @@ case "$(dpkg --print-architecture)" in
 		;;
 
 	i386)
-		_LINUX_FLAVOURS="486 686-pae"
+		_LINUX_FLAVOURS="686-pae"
 		_SOURCE="false"
 		;;
 esac
@@ -23,15 +23,15 @@ lb config noauto \
  	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox" \
 	--bootappend-live-failsafe "boot=live config quiet splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
 	--apt-indices false \
-        --parent-mirror-bootstrap "http://ftp.tw.debian.org/debian/" \
-        --parent-mirror-chroot "http://ftp.tw.debian.org/debian/" \
-        --parent-mirror-binary "http://ftp.tw.debian.org/debian/" \
-        --parent-mirror-debian-installer "http://ftp.tw.debian.org/debian/" \
-        --mirror-bootstrap "http://ftp.tw.debian.org/debian/" \
-        --mirror-chroot "http://ftp.tw.debian.org/debian/" \
-        --mirror-binary "http://ftp.tw.debian.org/debian/" \
-        --mirror-debian-installer "http://ftp.tw.debian.org/debian/" \
-        --mirror-bootstrap http://ftp.tw.debian.org/debian/ \
+        --parent-mirror-bootstrap "ftp://ftp.cn.debian.org/debian/" \
+        --parent-mirror-chroot "ftp://ftp.cn.debian.org/debian/" \
+        --parent-mirror-binary "ftp://ftp.cn.debian.org/debian/" \
+        --parent-mirror-debian-installer "ftp://ftp.cn.debian.org/debian/" \
+        --mirror-bootstrap "ftp://ftp.cn.debian.org/debian/" \
+        --mirror-chroot "ftp://ftp.cn.debian.org/debian/" \
+        --mirror-binary "ftp://ftp.cn.debian.org/debian/" \
+        --mirror-debian-installer "ftp://ftp.cn.debian.org/debian/" \
+        --mirror-bootstrap ftp://ftp.cn.debian.org/debian/ \
 	--source "${_SOURCE}" \
 	--archive-areas "main contrib" \
 	--iso-volume "NiixLinux" \
