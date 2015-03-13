@@ -59,14 +59,19 @@ appengine_rpc.HttpRpcServer.DEFAULT_COOKIE_FILE_PATH = './.appcfg_cookies'
 def upload(dirname, appid):
     assert isinstance(dirname, basestring) and isinstance(appid, basestring)
     filename = os.path.join(dirname, 'app.yaml')
-    template_filename = os.path.join(dirname, 'app.template.yaml')
-    assert os.path.isfile(template_filename), u'%s not exists!' % template_filename
-    with open(template_filename, 'rb') as fp:
+    assert os.path.isfile(filename), u'%s not exists!' % filename
+    with open(filename, 'rb') as fp:
         yaml = fp.read()
     with open(filename, 'wb') as fp:
         fp.write(re.sub(r'application:\s*\S+', 'application: '+appid, yaml))
     appcfg.main(['appcfg', 'rollback', dirname])
     appcfg.main(['appcfg', 'update', dirname])
+    with open(filename, 'wb') as fp:
+        fp.write(yaml)
+    try:
+        os.remove(appengine_rpc.HttpRpcServer.DEFAULT_COOKIE_FILE_PATH)
+    except OSError:
+        pass
 
 
 def main():
@@ -84,10 +89,6 @@ def main():
         pass
     for appid in appids.split('|'):
         upload('gae', appid)
-    try:
-        os.remove(appengine_rpc.HttpRpcServer.DEFAULT_COOKIE_FILE_PATH)
-    except OSError:
-        pass
 
 
 if __name__ == '__main__':
