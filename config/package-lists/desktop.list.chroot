@@ -160,6 +160,9 @@ lsb-base
 xdg-utils
 dpkg
 
+###proxy
+python-gevent
+
 ###kingsoft-office 
 #libstdc++6
 #libfreetype6
