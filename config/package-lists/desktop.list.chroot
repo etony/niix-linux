@@ -139,8 +139,6 @@ libgdk-pixbuf2.0-0
 libglib2.0-0
 libgtk2.0-0
 libnspr4
-libnss3
-libnss3-tools
 libpango1.0-0
 libstdc++6
 libudev0
@@ -160,8 +158,10 @@ lsb-base
 xdg-utils
 dpkg
 
-###proxy
+###GoAgent proxy
 python-gevent
+libnss3-tools
+libnss3
 
 ###kingsoft-office 
 #libstdc++6
