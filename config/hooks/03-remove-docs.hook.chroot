@@ -68,11 +68,28 @@ mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 mv /TOOLS/xfce4-desktop.xml  /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
+
+# chrome configure
+
+mv /TOOLS/config/.pki /home/tony/
+
+mv /TOOLS/config/google-chrome /home/tony/.config/
+
+mv /TOOLS/config/proxy.desktop  /etc/xdg/autostart/
+
 #chown -hR tony:tony /home/tony/.config
+
+#chown -hR tony:tony /home/tony/.pki
 
 chmod -R 777 /home/tony/.config
 
+chmod -R 777 /home/tony/.pki
+
 #刷新字体
 fc-cache -fv
+
+
+
+
 
 

@@ -1,7 +1,7 @@
-clonezilla_3.5.2-2_all.deb				http://clonezilla.org 		
-dbeaver_2.3.0_i386.deb					http://dbeaver.jkiss.org/ 	
-drbl_2.4.19-1_all.deb					http://drbl.org/ 		
-partclone_0.2.66-2_i386.deb				http://partclone.org/		
-wps-office_8.1.0.3724~b1p2_i386.deb			http://linux.wps.cn/		
-google-chrome-unstable_30.0.1581.2-1_i386.deb 		https://www.google.com/chrome/intl/en/eula_dev.html?dl=unstable_i386_deb		
-
+clonezilla_3.12.8-drbl1_all.deb			http://clonezilla.org 		
+dbeaver_2.3.0_i386.deb				http://dbeaver.jkiss.org/ 	
+drbl_2.11.15-drbl2_all.deb			http://drbl.org/ 		
+partclone_0.2.73.drbl2_i386.deb			http://partclone.org/		
+wps-office_9.1.3_i386.deb			http://linux.wps.cn/		
+google-chrome-stable_40.0.2214.93-1_i386.deb 	https://www.google.com/chrome/intl/en/eula_dev.html?dl=unstable_i386_deb		
+ 	       
