@@ -93,6 +93,7 @@ tcpdump
 wireshark
 chntpw
 nmap
+zenmap
 lsof
 hping3
 whatweb
