@@ -15,12 +15,14 @@ echo "###############remove unused packages###############"
  
 #上面将删除一些用不到的软件，man手册比较大
  
-apt-get -y autoremove ||true
+#apt-get -y autoremove ||true
+apt-get -y autoremove
+
 apt-get -y clean 
 
-echo "############### Removing unused files###############" 
+#echo "############### Removing unused files###############" 
 
- 25 find . -name *~ -print0 | xargs -0 rm -f
+#find . -name *~ -print0 | xargs -0 rm -f
  
 echo "###############remove temporary files###############" 
 rm -rf /var/cache/flash*
@@ -30,12 +32,12 @@ echo "###############remvoe all docs###############"
 rm -rf /usr/share/doc/*
 rm -rf /usr/share/doc-base/*
 #删除所有文档
-rm -rf /usr/include/* 
-rm -rf /usr/share/i18n/*
-rm -rf /usr/share/info/*
-rm -rf /usr/share/lintian/*
-rm -rf /usr/share/linda/*
-rm -rf /usr/share/zoneinfo/*
+#rm -rf /usr/include/* 
+#rm -rf /usr/share/i18n/*
+#rm -rf /usr/share/info/*
+#rm -rf /usr/share/lintian/*
+#rm -rf /usr/share/linda/*
+#rm -rf /usr/share/zoneinfo/*
 
 echo "###############remove all man docs###############"
 rm -rf /usr/share/man/*
@@ -78,6 +80,8 @@ mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
 
 mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
+mkdir -p /home/tony/.config/autostart/
+
 mv /TOOLS/xfce4-desktop.xml  /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 
@@ -87,7 +91,7 @@ mv /TOOLS/config/.pki /home/tony/
 
 mv /TOOLS/config/google-chrome /home/tony/.config/
 
-mv /TOOLS/config/proxy.desktop  /etc/xdg/autostart/
+mv /TOOLS/config/proxy.desktop  /home/tony/.config/autostart/
 
 #chown -hR tony:tony /home/tony/.config
 
@@ -98,7 +102,14 @@ chmod -R 777 /home/tony/.config
 chmod -R 777 /home/tony/.pki
 
 #刷新字体
+
 fc-cache -fv
+
+#更新DNS resolv.conf
+
+# echo "nameserver 114.114.114.114 " > /etc/resolv.conf 
+# echo "nameserver 202.98.192.67 " >> /etc/resolv.conf 
+  
 
 
 

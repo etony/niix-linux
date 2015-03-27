@@ -9,6 +9,8 @@ chown -hR tony:tony /home/tony/.config
 
 chmod -R 755 /home/tony/.config
 
+chown -hR tony:tony /home/tony/.pki
 
+chmod -R 755 /home/tony/.pki
 
 
