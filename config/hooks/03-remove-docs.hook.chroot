@@ -101,6 +101,8 @@ chmod -R 777 /home/tony/.config
 
 chmod -R 777 /home/tony/.pki
 
+echo "prepend domain-name-servers 114.114.114.114; " >> /etc/dhcp/dhclient.conf
+
 #刷新字体
 
 fc-cache -fv
@@ -110,7 +112,6 @@ fc-cache -fv
 # echo "nameserver 114.114.114.114 " > /etc/resolv.conf 
 # echo "nameserver 202.98.192.67 " >> /etc/resolv.conf 
   
-
 
 
 
