@@ -1,10 +1,10 @@
 [Image]
 Architecture: i386
 Archive-Areas: main contrib
-Distribution: jessie
-Mirror-Bootstrap: http://mirrors.sohu.com/debian/
+Distribution: stretch
+Mirror-Bootstrap: http://mirrors.aliyun.com/debian/
 
 [FIXME]
-Configuration-Version: 4.0~alpha36
+Configuration-Version: 5.0~a9
 Name: live-image
 Type: iso-hybrid
