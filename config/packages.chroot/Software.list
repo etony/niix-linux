@@ -1,7 +1,9 @@
-clonezilla_3.12.8-drbl1_all.deb
-drbl_2.11.15-drbl2_all.deb
+clonezilla_3.15.6-drbl1_all.deb
+drbl_2.14.12-drbl1_all.deb
+google-chrome-stable_41.0.2272.101-1_i386.deb
 libudev0_175-7.2_i386.deb
 ntfsprogs_1%3a2012.1.15AR.5-2.1_all.deb
-partclone-dbg_0.2.73.drbl2_i386.deb
-partclone_0.2.73.drbl2_i386.deb
+partclone_0.2.78-drbl1_i386.deb
+partclone-dbg_0.2.78-drbl1_i386.deb
 udpcast_20120424-drbl2_i386.deb
+wps-office_9.1.3_i386.deb

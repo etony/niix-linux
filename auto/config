@@ -20,18 +20,18 @@ lb config noauto \
 	--mode debian \
 	--linux-flavours "${_LINUX_FLAVOURS}" \
 	--linux-packages "linux-image linux-headers" \
- 	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox" \
+	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox" \
 	--bootappend-live-failsafe "boot=live config quiet splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
 	--apt-indices false \
-        --parent-mirror-bootstrap "ftp://ftp.cn.debian.org/debian/" \
-        --parent-mirror-chroot "ftp://ftp.cn.debian.org/debian/" \
-        --parent-mirror-binary "ftp://ftp.cn.debian.org/debian/" \
-        --parent-mirror-debian-installer "ftp://ftp.cn.debian.org/debian/" \
-        --mirror-bootstrap "ftp://ftp.cn.debian.org/debian/" \
-        --mirror-chroot "ftp://ftp.cn.debian.org/debian/" \
-        --mirror-binary "ftp://ftp.cn.debian.org/debian/" \
-        --mirror-debian-installer "ftp://ftp.cn.debian.org/debian/" \
-        --mirror-bootstrap ftp://ftp.cn.debian.org/debian/ \
+        --parent-mirror-bootstrap "http://mirrors.aliyun.com/debian/" \
+        --parent-mirror-chroot "http://mirrors.aliyun.com/debian/" \
+        --parent-mirror-binary "http://mirrors.aliyun.com/debian/" \
+        --parent-mirror-debian-installer "http://mirrors.aliyun.com/debian/" \
+        --mirror-bootstrap "http://mirrors.aliyun.com/debian/" \
+        --mirror-chroot "http://mirrors.aliyun.com/debian/" \
+        --mirror-binary "http://mirrors.aliyun.com/debian/" \
+        --mirror-debian-installer "http://mirrors.aliyun.com/debian/" \
+        --mirror-bootstrap "http://mirrors.aliyun.com/debian/" \
 	--source "${_SOURCE}" \
 	--archive-areas "main contrib" \
 	--iso-volume "NiixLinux" \
@@ -41,9 +41,12 @@ lb config noauto \
 	--firmware-chroot false \
 	--memtest none \
 	--debootstrap-options "--variant=minbase" \
-	--debian-installer live \
 	--bootloader syslinux \
 "${@}"
+
+
+#	--debian-installer live \
+
 
 #	
 #       --distribution sid \
@@ -63,3 +66,4 @@ lb config noauto \
 #	mirrors.sohu.com
 #ftp.tw.debian.org
 #ftp://ftp.cn.debian.org
+#http://mirrors.aliyun.com/debian/

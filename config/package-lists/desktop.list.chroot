@@ -1,6 +1,6 @@
 
 ##########################################
-debian-installer-launcher
+#debian-installer-launcher
 live-tools
 
 ##########################################
@@ -93,6 +93,7 @@ tcpdump
 wireshark
 chntpw
 nmap
+zmap
 zenmap
 lsof
 hping3
