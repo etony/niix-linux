@@ -38,15 +38,16 @@ lb config noauto \
 	--iso-publisher "Niix Linux Systems; etony.an@gmail.com" \
 	--iso-application "NiixLinux" \
 	--iso-preparer "NiixBuilder" \
-	--debian-installer live \
 	--firmware-chroot false \
 	--memtest none \
 	--debootstrap-options "--variant=minbase" \
 	--bootloader syslinux \
+	--distribution sid \
+	--debian-installer live \
 "${@}"
 
 
-#	--debian-installer live \
+#	
 
 
 #	

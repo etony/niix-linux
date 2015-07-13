@@ -68,6 +68,7 @@ w3m
 python3
 python-vte
 python-openssl
+iceweasel
 
 gparted
 parted
@@ -84,6 +85,7 @@ filezilla
 iptux
 axel
 gthumb
+xvnc4viewer
 ##########################################
 ###SECURITY###
 
@@ -100,7 +102,7 @@ hping3
 whatweb
 task-ssh-server
 netcat
-netcat6
+##netcat6
 
 dnsutils
 dnstracer
@@ -176,3 +178,7 @@ libnss3
 #libfontconfig1
 #libcairo2
 #libcap2
+
+
+#http://ftp.uni-kl.de/pub/linux/knoppix-dvd/dpkg-l-dvd-742.txt
+
