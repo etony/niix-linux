@@ -31,6 +31,11 @@ thunar
 #lxde-core
 
 
+#automount/eth0
+sysvinit
+sysvinit-utils
+
+
 xdg-utils
 xfonts-wqy
 ttf-wqy-zenhei
@@ -50,6 +55,7 @@ vim
 leafpad
 evince
 less
+iputils-ping
 
 rox-filer 
 file-roller 
@@ -74,7 +80,7 @@ gparted
 parted
 bc
 net-tools
-
+pciutils
 
 #clonezilla
 #drbl

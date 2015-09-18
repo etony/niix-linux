@@ -49,4 +49,7 @@ chmod -R 755 /home/tony/.config
 
 chmod -R 755 /home/tony/.pki
 
+sed -i "s/eth0/eno1/g" /etc/network/interfaces
+
+cat /TOOLS/hosts >>/etc/hosts
 
