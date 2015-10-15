@@ -90,8 +90,13 @@ grdesktop
 filezilla
 iptux
 axel
-gthumb
 xvnc4viewer
+
+#####graph#####
+imagemagick
+gimp
+gthumb
+
 ##########################################
 ###SECURITY###
 
@@ -113,6 +118,14 @@ netcat
 dnsutils
 dnstracer
 
+w3af
+sqlmap
+
+testdisk 
+gpart
+
+#ScureCRT#
+libpython2.7
 ##########################################
 ###JAVA###
 #openjdk-6-jre

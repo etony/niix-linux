@@ -17,6 +17,10 @@ mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 mkdir -p /home/tony/.config/autostart/
 
+mkdir -p /home/tony/.vandyke/SecureCRT/Config/
+
+mv /TOOLS/SecureCRT.lic /home/tony/.vandyke/SecureCRT/Config/
+
 mv /TOOLS/xfce4-desktop.xml  /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 
