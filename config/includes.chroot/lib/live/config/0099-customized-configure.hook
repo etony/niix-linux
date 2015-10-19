@@ -53,7 +53,12 @@ chmod -R 755 /home/tony/.config
 
 chmod -R 755 /home/tony/.pki
 
+#Due to the new udev version, the devices will be renamed by default to
+#names like enp0s3. This is not done by the kernel and no driver issue,
+#just a renaming at boot time done by udev.
+
 sed -i "s/eth0/eno1/g" /etc/network/interfaces
+sed -i "s/eth0/enp0s3/g" /etc/network/interfaces
 
 cat /TOOLS/hosts >>/etc/hosts
 
