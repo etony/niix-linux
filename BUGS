@@ -13,7 +13,7 @@ BUGS
 bug#3
 http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
 ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
-create a empty file to disable it.
+create a empty file to disable that function.
 
 mv hook files from config/hooks/ to config/hooks/live/ directory.
 
