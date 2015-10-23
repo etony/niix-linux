@@ -57,8 +57,14 @@ chmod -R 755 /home/tony/.pki
 #names like enp0s3. This is not done by the kernel and no driver issue,
 #just a renaming at boot time done by udev.
 
-sed -i "s/eth0/eno1/g" /etc/network/interfaces
-sed -i "s/eth0/enp0s3/g" /etc/network/interfaces
+#sed -i "s/eno1/eth0/g" /etc/network/interfaces
+
+#sed -i "s/enp0s3/eth0/g" /etc/network/interfaces
 
 cat /TOOLS/hosts >>/etc/hosts
 
+#echo "export TZ=\"Asia/Shanghai\"" >> /etc/profile
+
+echo "Asia/Shanghai" > /etc/timezone
+
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 

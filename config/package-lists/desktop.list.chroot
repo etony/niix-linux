@@ -18,6 +18,9 @@ xfce4-panel
 xfce4-screenshooter
 xfce4-session
 thunar
+#### auto mount partation or usb device
+gvfs
+dbus
 
 #AweSome
 #awesome
@@ -77,6 +80,8 @@ python-openssl
 iceweasel
 
 gparted
+policykit-1
+
 parted
 bc
 net-tools

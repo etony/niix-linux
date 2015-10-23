@@ -1,0 +1,191 @@
+1.lb config => 执行 auto/config 脚本
+	lb config noauto ....
+2. 执行 auto/build 脚本
+	lb build noauto 
+为 debian/sid/i386 系统构建配置树
+
+lb bootstrap 
+P: Setting up cleanup function
+
+lb bootstrap_cache restore
+lb bootstrap_debootstrap 
+lb bootstrap_archive-keys 
+lb bootstrap_cache save
+
+lb chroot_devpts install
+lb chroot_proc install
+lb chroot_selinuxfs install
+lb chroot_sysfs install
+lb chroot_debianchroot install
+lb chroot_dpkg install
+lb chroot_tmpfs install
+lb chroot_sysv-rc install
+lb chroot_hosts install
+lb chroot_resolv install
+lb chroot_hostname install
+lb chroot_apt install
+lb bootstrap_archives binary
+
+lb chroot_apt remove
+lb chroot_hostname remove
+lb chroot_resolv remove
+lb chroot_hosts remove
+lb chroot_sysv-rc remove
+lb chroot_tmpfs remove
+lb chroot_dpkg remove
+lb chroot_debianchroot remove
+lb chroot_sysfs remove
+lb chroot_selinuxfs remove
+lb chroot_proc remove
+lb chroot_devpts remove
+
+
+lb chroot 
+
+lb chroot_cache restore
+lb chroot_devpts install
+lb chroot_proc install
+lb chroot_sysfs install
+lb chroot_debianchroot install
+lb chroot_dpkg install
+lb chroot_tmpfs install
+lb chroot_sysv-rc install
+lb chroot_hosts install
+lb chroot_resolv install
+lb chroot_hostname install
+lb chroot_apt install
+lb chroot_archives chroot install
+lb chroot_linux-image 
+lb chroot_firmware 
+lb chroot_preseed 
+lb chroot_package-lists install
+lb chroot_install-packages install
+lb chroot_package-lists live
+lb chroot_install-packages live
+lb chroot_includes 
+lb chroot_hooks 
+lb chroot_hacks 
+lb chroot_interactive 
+lb chroot_archives chroot remove
+lb chroot_apt remove
+lb chroot_hostname remove
+lb chroot_resolv remove
+lb chroot_hosts remove
+lb chroot_sysv-rc remove
+lb chroot_tmpfs remove
+lb chroot_dpkg remove
+lb chroot_debianchroot remove
+lb chroot_sysfs remove
+lb chroot_selinuxfs remove
+lb chroot_proc remove
+lb chroot_devpts remove
+lb chroot_cache save
+
+lb installer 
+lb chroot_devpts install
+lb chroot_proc install
+lb chroot_selinuxfs install
+lb chroot_sysfs install
+lb chroot_debianchroot install
+lb chroot_dpkg install
+lb chroot_tmpfs install
+lb chroot_sysv-rc install
+lb chroot_hosts install
+lb chroot_resolv install
+lb chroot_hostname install
+lb chroot_apt install
+lb chroot_archives chroot install
+
+lb installer_debian-installer 
+lb installer_preseed 
+
+lb chroot_archives chroot remove
+lb chroot_apt remove
+lb chroot_hostname remove
+lb chroot_resolv remove
+lb chroot_hosts remove
+lb chroot_sysv-rc remove
+lb chroot_tmpfs remove
+lb chroot_dpkg remove
+lb chroot_debianchroot remove
+lb chroot_sysfs remove
+lb chroot_selinuxfs remove
+lb chroot_proc remove
+lb chroot_devpts remove
+
+lb binary 
+lb binary_chroot 
+lb chroot_devpts install
+lb chroot_proc install
+lb chroot_selinuxfs install
+lb chroot_sysfs install
+lb chroot_hosts install
+lb chroot_resolv install
+lb chroot_hostname install
+lb chroot_sysv-rc install
+lb chroot_apt install-binary
+lb chroot_archives chroot install
+
+lb binary_rootfs 
+P: Begin building root filesystem image...
+P: Preparing squashfs image...
+
+lb chroot_archives binary remove
+lb chroot_apt remove
+lb chroot_hostname remove
+lb chroot_resolv remove
+lb chroot_hosts remove
+lb chroot_sysv-rc remove
+lb chroot_dpkg remove
+lb chroot_debianchroot remove
+lb chroot_sysfs remove
+lb chroot_selinuxfs remove
+lb chroot_proc remove
+lb chroot_devpts remove
+
+lb chroot_devpts install
+lb chroot_proc install
+lb chroot_selinuxfs install
+lb chroot_sysfs install
+lb chroot_debianchroot install
+lb chroot_dpkg install
+lb chroot_sysv-rc install
+lb chroot_hosts install
+lb chroot_resolv install
+lb chroot_hostname install
+lb chroot_apt install
+lb chroot_archives binary install
+
+lb binary_manifest 
+lb binary_package-lists 
+lb binary_linux-image 
+lb binary_memtest 
+lb binary_grub-legacy 
+lb binary_grub-pc 
+lb binary_syslinux 
+lb binary_disk 
+lb binary_loadlin 
+lb binary_win32-loader 
+lb binary_includes 
+lb binary_hooks 
+lb binary_checksums 
+P: Begin creating binary md5sum.txt...
+lb binary_iso 
+P: Begin building binary iso image...
+lb binary_netboot 
+lb binary_tar 
+lb binary_hdd 
+lb binary_zsync 
+
+lb chroot_apt remove
+lb chroot_hostname remove
+lb chroot_resolv remove
+lb chroot_hosts remove
+lb chroot_sysv-rc remove
+lb chroot_dpkg remove
+lb chroot_debianchroot remove
+lb chroot_sysfs remove
+lb chroot_selinuxfs remove
+lb chroot_proc remove
+lb chroot_devpts remove
+lb source

@@ -2,3 +2,29 @@ BUGS
 1. 桌面无法自动挂载磁盘分区和U盘
 2. wps新版本升级提示
 3. 网卡非eth0
+4. 时区UTC
+
+
+
+
+
+2015-10-23
+
+bug#3
+http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
+ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
+create a empty file to disable it.
+
+mv hook files from config/hooks/ to config/hooks/live/ directory.
+
+2015-10-22
+bug#1
+install gvfs,dbus
+
+bug#4
+at boot time, modify /etc/timezone, /etc/localtime files
+	echo "Asia/Shanghai" > /etc/timezone
+	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+
+
+ 
