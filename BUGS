@@ -24,11 +24,11 @@ BUGS
 	修改默认用户 tony 及 root 的密码为 tony.
 
 2015-10-23
-
 bug#3
 	http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
 	ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
 	create a empty file to disable it.
+
 
 	mv hook files from config/hooks/ to config/hooks/live/ directory.
 
