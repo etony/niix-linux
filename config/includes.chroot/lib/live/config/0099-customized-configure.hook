@@ -63,8 +63,16 @@ chmod -R 755 /home/tony/.pki
 
 cat /TOOLS/hosts >>/etc/hosts
 
+echo  "###############Customize timezone###############"
 #echo "export TZ=\"Asia/Shanghai\"" >> /etc/profile
 
 echo "Asia/Shanghai" > /etc/timezone
 
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+
+echo  "###############Customize user's password###############"
+
+echo "root:tony"|chpasswd
+
+echo "tony:tony"|chpasswd
+

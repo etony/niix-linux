@@ -1,30 +1,45 @@
 BUGS
-1. 桌面无法自动挂载磁盘分区和U盘
-2. wps新版本升级提示
-3. 网卡非eth0
-4. 时区UTC
+	1. 桌面无法自动挂载磁盘分区和U盘
+	2. wps新版本升级提示
+	3. 网卡非eth0
+	4. 时区UTC
+	5. Not authorized to perform operation
 
 
 
 
+
+
+
+
+2015-10-29
+	bug#5
+	修改polkit配置，窗口管理器用polkit来管理权限
+	默认规则：/usr/share/polkit-1/actions
+	自定义配置：/etc/polkit-1/localauthority/50-local.d
+	
+	增加了一些系统维护工具
+
+2015-10-26
+	修改默认用户 tony 及 root 的密码为 tony.
 
 2015-10-23
 
 bug#3
-http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
-ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
-create a empty file to disable it.
+	http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
+	ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
+	create a empty file to disable it.
 
-mv hook files from config/hooks/ to config/hooks/live/ directory.
+	mv hook files from config/hooks/ to config/hooks/live/ directory.
 
 2015-10-22
-bug#1
-install gvfs,dbus
+	bug#1
+	install gvfs,dbus
 
 bug#4
-at boot time, modify /etc/timezone, /etc/localtime files
-	echo "Asia/Shanghai" > /etc/timezone
-	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
-
+	at boot time, modify /etc/timezone, /etc/localtime files
+		echo "Asia/Shanghai" > /etc/timezone
+		cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+	
 
  

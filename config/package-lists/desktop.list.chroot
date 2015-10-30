@@ -3,6 +3,12 @@
 debian-installer-launcher
 live-tools
 
+
+
+###apt-utils####
+##libapt-inst1.7
+#libapt-pkg4.16
+#libstdc++6
 ##########################################
 ###X11###
 #gdm3
@@ -21,8 +27,15 @@ thunar
 #### auto mount partation or usb device
 gvfs
 dbus
+gvfs-backends 
+gvfs-fuse 
+libdleyna-connector-dbus-1.0-1
+python-dbus
+python-dbus-dev
+python3-dbus 
 
-#AweSome
+
+##AweSome
 #awesome
 #awesome-extra
 
@@ -38,7 +51,7 @@ dbus
 sysvinit
 sysvinit-utils
 
-
+##fonts and CIM
 xdg-utils
 xfonts-wqy
 ttf-wqy-zenhei
@@ -97,6 +110,26 @@ iptux
 axel
 xvnc4viewer
 
+
+traceroute
+mtr
+socat
+iftop
+tshark
+autossh
+iperf
+elinks
+mdadm
+lvm2
+nload
+iotop
+sysstat 
+screen
+tmux
+lshw-gtk 
+inxi
+#https://linux.cn/article-4347-1-rel.html
+
 #####graph#####
 imagemagick
 gimp
@@ -129,7 +162,7 @@ sqlmap
 testdisk 
 gpart
 
-#ScureCRT#
+##ScureCRT#
 libpython2.7
 ##########################################
 ###JAVA###

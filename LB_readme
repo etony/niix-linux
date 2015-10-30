@@ -60,10 +60,14 @@ lb chroot_firmware
 lb chroot_preseed 
 lb chroot_package-lists install
 lb chroot_install-packages install
+	install packages
+
 lb chroot_package-lists live
 lb chroot_install-packages live
 lb chroot_includes 
 lb chroot_hooks 
+	exe coustome hooks
+
 lb chroot_hacks 
 lb chroot_interactive 
 lb chroot_archives chroot remove
@@ -168,6 +172,9 @@ lb binary_loadlin
 lb binary_win32-loader 
 lb binary_includes 
 lb binary_hooks 
+	executing binary hooks
+
+
 lb binary_checksums 
 P: Begin creating binary md5sum.txt...
 lb binary_iso 

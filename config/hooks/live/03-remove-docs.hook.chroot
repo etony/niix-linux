@@ -83,6 +83,9 @@ echo "###############disable net card eth0 to enp0s3###############"
 
 ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
 
+echo "###############configure polkit to auto mount partations###############"
+
+cp /TOOLS/50-filesystem-mount-system-internal.pkla /etc/polkit-1/localauthority/50-local.d/ 
 
   
 
