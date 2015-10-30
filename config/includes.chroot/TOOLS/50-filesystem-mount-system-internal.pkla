@@ -1,0 +1,6 @@
+[Override udisks2 filesystem-mount-system rule]
+Identity=unix-user:tony
+Action=org.freedesktop.udisks2.filesystem-mount-system
+ResultAny=auth_admin
+ResultInactive=auth_admin
+ResultActive=yes
