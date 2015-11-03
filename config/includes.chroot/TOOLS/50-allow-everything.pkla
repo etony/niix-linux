@@ -1,0 +1,6 @@
+[Allow Everything Dammit]
+Identity=unix-user:tony
+Action=*
+ResultAny=auth_admin
+ResultInactive=auth_admin
+ResultActive=yes
