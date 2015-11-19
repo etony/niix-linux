@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# sudo /usr/bin/python /TOOLS/GoAgent/local/proxy.py >> /dev/null &
-google-chrome --proxy-server=127.0.0.1:8087 &
-
-# sleep 20s
-
-#certutil -d sql:/home/tony/.pki/nssdb  -A -t TC,C,C -n"goagent" -i /TOOLS/GoAgent/local/CA.crt  &

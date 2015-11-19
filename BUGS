@@ -6,14 +6,19 @@ BUGS
 	5. Not authorized to perform operation
 
 
+2015-11-2
+remove goagent
 
 
-
-
+2015-11-2
+bug#5
+	自定义配置:50-allow-everything.pkla
+	http://manpages.ubuntu.com/manpages/raring/man1/pkexec.1.html
+	解决pkexec执行权限问题
 
 
 2015-10-29
-	bug#5
+bug#5
 	修改polkit配置，窗口管理器用polkit来管理权限
 	默认规则：/usr/share/polkit-1/actions
 	自定义配置：/etc/polkit-1/localauthority/50-local.d
@@ -24,16 +29,16 @@ BUGS
 	修改默认用户 tony 及 root 的密码为 tony.
 
 2015-10-23
+
 bug#3
 	http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
 	ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
 	create a empty file to disable it.
 
-
 	mv hook files from config/hooks/ to config/hooks/live/ directory.
 
 2015-10-22
-	bug#1
+bug#1
 	install gvfs,dbus
 
 bug#4

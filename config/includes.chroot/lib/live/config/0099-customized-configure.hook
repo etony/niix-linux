@@ -15,7 +15,7 @@ mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
 
 mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
-mkdir -p /home/tony/.config/autostart/
+# mkdir -p /home/tony/.config/autostart/  #remove goagent
 
 mkdir -p /home/tony/.vandyke/SecureCRT/Config/
 
@@ -30,7 +30,7 @@ mv /TOOLS/config/.pki /home/tony/
 
 mv /TOOLS/config/google-chrome /home/tony/.config/
 
-mv /TOOLS/config/proxy.desktop  /home/tony/.config/autostart/
+# mv /TOOLS/config/proxy.desktop  /home/tony/.config/autostart/ #remove goagent
 
 #chown -hR tony:tony /home/tony/.config
 
