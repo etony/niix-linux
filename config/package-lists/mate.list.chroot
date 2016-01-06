@@ -1,0 +1,8 @@
+##Mate
+mate-desktop-environment-core
+caja
+gvfs-backends
+gvfs-daemons
+policykit-1
+libpam-systemd
+cgmanager

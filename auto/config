@@ -2,6 +2,8 @@
 
 set -e
 
+_MIRROR_SITE="http://mirrors.aliyun.com/debian/"
+
 case "$(dpkg --print-architecture)" in
 	amd64)
 		_LINUX_FLAVOURS="amd64"
@@ -9,7 +11,7 @@ case "$(dpkg --print-architecture)" in
 		;;
 
 	i386)
-		_LINUX_FLAVOURS="586 686-pae"
+		_LINUX_FLAVOURS="686-pae"
 		_SOURCE="false"
 		;;
 esac
@@ -23,15 +25,15 @@ lb config noauto \
 	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox" \
 	--bootappend-live-failsafe "boot=live config quiet splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
 	--apt-indices false \
-        --parent-mirror-bootstrap "http://mirrors.aliyun.com/debian/" \
-        --parent-mirror-chroot "http://mirrors.aliyun.com/debian/" \
-        --parent-mirror-binary "http://mirrors.aliyun.com/debian/" \
-        --parent-mirror-debian-installer "http://mirrors.aliyun.com/debian/" \
-        --mirror-bootstrap "http://mirrors.aliyun.com/debian/" \
-        --mirror-chroot "http://mirrors.aliyun.com/debian/" \
-        --mirror-binary "http://mirrors.aliyun.com/debian/" \
-        --mirror-debian-installer "http://mirrors.aliyun.com/debian/" \
-        --mirror-bootstrap "http://mirrors.aliyun.com/debian/" \
+        --parent-mirror-bootstrap "${_MIRROR_SITE}" \
+        --parent-mirror-chroot "${_MIRROR_SITE}" \
+        --parent-mirror-binary "${_MIRROR_SITE}" \
+        --parent-mirror-debian-installer "${_MIRROR_SITE}" \
+        --mirror-bootstrap "${_MIRROR_SITE}" \
+        --mirror-chroot "${_MIRROR_SITE}" \
+        --mirror-binary "${_MIRROR_SITE}" \
+        --mirror-debian-installer "${_MIRROR_SITE}" \
+        --mirror-bootstrap "${_MIRROR_SITE}" \
 	--source "${_SOURCE}" \
 	--archive-areas "main contrib" \
 	--iso-volume "NiixLinux" \

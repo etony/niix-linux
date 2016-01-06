@@ -15,24 +15,19 @@ live-tools
 lightdm
 
 
-#task-xfce-desktop
 
-## xfce4 desktop
-xfdesktop4
-xfce4-panel
 
-xfce4-screenshooter
-xfce4-session
-thunar
+
+
 #### auto mount partation or usb device
-gvfs
-dbus
-gvfs-backends 
-gvfs-fuse 
-libdleyna-connector-dbus-1.0-1
-python-dbus
-python-dbus-dev
-python3-dbus 
+#gvfs
+#dbus
+#gvfs-backends 
+#gvfs-fuse 
+#libdleyna-connector-dbus-1.0-1
+#python-dbus
+#python-dbus-dev
+#python3-dbus 
 
 
 ##AweSome
@@ -48,8 +43,8 @@ python3-dbus
 
 
 #automount/eth0
-sysvinit
-sysvinit-utils
+#sysvinit
+#sysvinit-utils
 
 ##fonts and CIM
 xdg-utils
@@ -93,7 +88,8 @@ python-openssl
 iceweasel
 
 gparted
-policykit-1
+smartmontools
+
 
 parted
 bc
@@ -129,6 +125,10 @@ tmux
 lshw-gtk 
 inxi
 #https://linux.cn/article-4347-1-rel.html
+
+
+##lantern
+libappindicator3-1
 
 #####graph#####
 imagemagick

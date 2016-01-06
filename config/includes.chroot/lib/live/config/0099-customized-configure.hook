@@ -76,3 +76,4 @@ echo "root:tony"|chpasswd
 
 echo "tony:tony"|chpasswd
 
+cat /TOOLS/bashrc >>/etc/bash.bashrc
