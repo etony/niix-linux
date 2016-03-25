@@ -32,6 +32,8 @@ mv /TOOLS/config/google-chrome /home/tony/.config/
 
 # mv /TOOLS/config/proxy.desktop  /home/tony/.config/autostart/ #remove goagent
 
+mv /TOOLS/config/smartqq.desktop /usr/share/applications/
+
 #chown -hR tony:tony /home/tony/.config
 
 #chown -hR tony:tony /home/tony/.pki
@@ -77,3 +79,6 @@ echo "root:tony"|chpasswd
 echo "tony:tony"|chpasswd
 
 cat /TOOLS/bashrc >>/etc/bash.bashrc
+
+cat /TOOLS/bashrc >>/home/tony/.bashrc
+

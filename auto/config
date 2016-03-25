@@ -2,7 +2,7 @@
 
 set -e
 
-_MIRROR_SITE="http://mirrors.aliyun.com/debian/"
+_MIRROR_SITE="http://ftp.cn.debian.org/debian/"
 
 case "$(dpkg --print-architecture)" in
 	amd64)

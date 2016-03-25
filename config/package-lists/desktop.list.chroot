@@ -79,7 +79,7 @@ mlocate
 ytree
 tree
 mc
-lynx 
+#lynx 
 links2 
 w3m
 python3
@@ -127,13 +127,36 @@ inxi
 #https://linux.cn/article-4347-1-rel.html
 
 
+#https://linux.cn/article-6987-1.html
+htop
+atop
+powertop
+ntopng
+iftop
+jnettop
+bandwidthd
+nethogs
+bmon
+nmon
+discus
+xosview
+dstat
+
 ##lantern
 libappindicator3-1
+
+
+##QQ
+libnotify-bin
 
 #####graph#####
 imagemagick
 gimp
 gthumb
+
+
+vlc
+xchm
 
 ##########################################
 ###SECURITY###
@@ -164,6 +187,7 @@ gpart
 
 ##ScureCRT#
 libpython2.7
+libssl1.0.0
 ##########################################
 ###JAVA###
 #openjdk-6-jre
@@ -177,7 +201,7 @@ perl
 bash
 wget
 partimage
-ntfsprogs
+#ntfsprogs
 ntfs-3g
 
 ###drbl

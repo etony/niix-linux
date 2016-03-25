@@ -88,6 +88,13 @@ echo "###############configure polkit to auto mount partations###############"
 cp /TOOLS/50-filesystem-mount-system-internal.pkla /etc/polkit-1/localauthority/50-local.d/ 
 cp /TOOLS/50-allow-everything.pkla /etc/polkit-1/localauthority/50-local.d/ 
   
+#echo "############### install QQ ###############"
 
+#dpkg -i /TOOLS/WineQQ7.8-20151109-Longene.deb
+
+#rm /TOOLS/WineQQ7.8-20151109-Longene.deb
+
+#mkdir -p /home/tony/
+#mv  /TOOLS/.longene /home/tony/
 
 
