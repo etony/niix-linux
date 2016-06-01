@@ -97,4 +97,19 @@ cp /TOOLS/50-allow-everything.pkla /etc/polkit-1/localauthority/50-local.d/
 #mkdir -p /home/tony/
 #mv  /TOOLS/.longene /home/tony/
 
+echo "############### install Lantern  ###############"
+
+dpkg -i /TOOLS/lantern-installer-64-bit.deb
+rm /TOOLS/lantern-installer-64-bit.deb
+
+echo "############### conifgure opensshserver  ###############"
+
+sed -i 's/prohibit-password/yes/g' /etc/ssh/sshd_config
+sed -i '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
+
+
+
+#echo "##################Adjust time zone ############"
+
+#hwclock --systohc --localtime
 

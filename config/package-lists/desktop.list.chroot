@@ -85,7 +85,9 @@ w3m
 python3
 python-vte
 python-openssl
-iceweasel
+#iceweasel
+firefox-esr
+
 
 gparted
 smartmontools
@@ -147,7 +149,7 @@ libappindicator3-1
 
 
 ##QQ
-libnotify-bin
+#libnotify-bin
 
 #####graph#####
 imagemagick
@@ -226,7 +228,6 @@ libgtk2.0-0
 libnspr4
 libpango1.0-0
 libstdc++6
-libudev0
 libudev1
 libx11-6
 libxcomposite1
@@ -259,7 +260,7 @@ libnss3
 #libfontconfig1
 #libcairo2
 #libcap2
-
+ttf-mscorefonts-installer
 
 #http://ftp.uni-kl.de/pub/linux/knoppix-dvd/dpkg-l-dvd-742.txt
 

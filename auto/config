@@ -22,7 +22,7 @@ lb config noauto \
 	--mode debian \
 	--linux-flavours "${_LINUX_FLAVOURS}" \
 	--linux-packages "linux-image linux-headers" \
-	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox" \
+	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox timezone=Asia/Shanghai" \
 	--bootappend-live-failsafe "boot=live config quiet splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
 	--apt-indices false \
         --parent-mirror-bootstrap "${_MIRROR_SITE}" \
