@@ -5,7 +5,11 @@ BUGS
 	4. 时区UTC
 	5. Not authorized to perform operation
 
-
+2016-6-1
+move to amd64
+bug#4
+	解决时区问题
+	
 2015-11-2
 remove goagent
 
