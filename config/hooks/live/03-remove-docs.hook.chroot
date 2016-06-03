@@ -113,3 +113,11 @@ sed -i '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
 
 #hwclock --systohc --localtime
 
+echo  "###############Customize timezone###############"
+
+echo "Asia/Shanghai" > /etc/timezone
+
+rm /etc/localtime
+
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+

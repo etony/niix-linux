@@ -196,3 +196,77 @@ lb chroot_selinuxfs remove
 lb chroot_proc remove
 lb chroot_devpts remove
 lb source
+
+
+
+
+发行版镜像
+bootstrap：生成基本系统
+chroot：构建最终系统
+build time： --mirror-bootstrap   --mirror-chroot-security
+	--mirror-chroot 默认取  --mirror-bootstrap 的值
+
+run time：--mirror-binary*
+
+附加镜像（如同使用参数）
+config/archives/your-repository.list.chroot 
+config/archives/your-repository.list.binary ==> /etc/apt/sources.list.d/
+
+版本锁定
+config/archives/your-repository.pref.{binary,chroot}   ==>  /etc/apt/preferences.d/
+
+条件判断
+config/package-lists/xxx.list.chroot
+
+	#if ARCHITECTURES amd64
+	ia32-libs
+	#endif
+
+	#if ARCHITECTURES i386 amd64
+	memtest86+
+	#endif
+
+	#if ARCHIVE_AREAS contrib non-free
+	vrms
+	#endif
+
+
+内核
+	 --linux-flavours 指定参数将会自动添加 linux-image- 前缀
+
+第三方软件
+	/config/packages.chroot/ 目录下
+
+
+配置 APT
+apt参数
+	--apt 
+
+代理
+	 --apt-http-proxy http://proxy/
+
+--apt-indices false ：清空/var/lib/apt目录(update缓存)
+--apt-recommends false
+--apt-options "--yes -oAcquire::Check-Valid-Until=false"  或者  config/apt/apt.conf
+
+版本锁定
+	config/archives/*.pref
+	config/archives/*.pref.chroot
+	config/apt/preferences  
+	config/includes.chroot/etc/apt/preferences 
+
+	 config/archives/sid.pref.chroot
+		Package: live-*
+		Pin: release n=sid
+		Pin-Priority: 600
+		Package: *
+		Pin: release n=sid
+		Pin-Priority: 1
+
+HOOKS
+	构建脚本
+		 config/hooks/live
+		config/hooks/normal
+
+	引导脚本
+		/lib/live/config/

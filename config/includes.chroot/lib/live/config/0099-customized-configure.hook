@@ -65,14 +65,14 @@ chmod -R 755 /home/tony/.pki
 
 cat /TOOLS/hosts >>/etc/hosts
 
-echo  "###############Customize timezone###############"
+#echo  "###############Customize timezone###############"
 ##echo "export TZ=\"Asia/Shanghai\"" >> /etc/profile
 
-echo "Asia/Shanghai" > /etc/timezone
+#echo "Asia/Shanghai" > /etc/timezone
 
-rm /etc/localtime
+#rm /etc/localtime
 
-cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+#cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
 
 echo  "###############Customize user's password###############"
 
@@ -87,4 +87,3 @@ cat /TOOLS/bashrc >>/home/tony/.bashrc
 echo "##################Adjust time zone ############"
 
 hwclock --systohc --localtime
-#hwclock --hctosys
