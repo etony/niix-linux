@@ -5,6 +5,12 @@ BUGS
 	4. 时区UTC
 	5. Not authorized to perform operation
 
+2017-4-27
+remove roxterm
+update libssl1.0.0 libssl1.0.2
+add mrxvt-cjk isc-dhcp-client
+modified 0099-customized-configure.hook to run dhclient
+
 2016-6-1
 move to amd64
 bug#4
