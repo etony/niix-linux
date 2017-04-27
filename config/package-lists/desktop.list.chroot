@@ -58,10 +58,11 @@ fcitx-pinyin
 ###Tools###
 #mlterm 
 #rxvt-ml
-roxterm
+#roxterm
 #gnome-icon-theme
 #vim-gtk
 #nano
+mrxvt-cjk
 vim
 leafpad
 evince
@@ -143,6 +144,7 @@ nmon
 discus
 xosview
 dstat
+isc-dhcp-client
 
 ##lantern
 libappindicator3-1
@@ -181,7 +183,7 @@ netcat
 dnsutils
 dnstracer
 
-w3af
+#w3af
 sqlmap
 
 testdisk 
@@ -189,7 +191,7 @@ gpart
 
 ##ScureCRT#
 libpython2.7
-libssl1.0.0
+libssl1.0.2
 ##########################################
 ###JAVA###
 #openjdk-6-jre

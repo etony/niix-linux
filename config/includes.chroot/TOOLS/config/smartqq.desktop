@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Smart QQ
+GenericName=Smart QQ
+Comment=Smart QQ
+Exec=/usr/bin/google-chrome-stable http://w.qq.com/
+Terminal=false
+Icon=/TOOLS/icon-qq.png
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+X-Ayatana-Desktop-Shortcuts=NewWindow;NewIncognito
+

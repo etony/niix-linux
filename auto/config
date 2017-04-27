@@ -25,7 +25,7 @@ lb config noauto \
 	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox timezone=Asia/Shanghai" \
 	--bootappend-live-failsafe "boot=live config quiet splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
 	--apt-indices false \
-	--archive-areas "main contrib non-free"
+	--archive-areas "main contrib non-free" \
         --parent-mirror-bootstrap "${_MIRROR_SITE}" \
         --parent-mirror-chroot "${_MIRROR_SITE}" \
         --parent-mirror-binary "${_MIRROR_SITE}" \
