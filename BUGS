@@ -7,7 +7,7 @@ BUGS
 
 2017-4-27
 remove roxterm
-update libssl1.0.0 libssl1.0.2
+update libssl1.0.0 to libssl1.0.2
 add mrxvt-cjk isc-dhcp-client
 modified 0099-customized-configure.hook to run dhclient
 
