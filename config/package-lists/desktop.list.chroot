@@ -62,7 +62,7 @@ fcitx-pinyin
 #gnome-icon-theme
 #vim-gtk
 #nano
-mrxvt-cjk
+#mrxvt-cjk
 vim
 leafpad
 evince
@@ -92,7 +92,7 @@ firefox-esr
 
 gparted
 smartmontools
-
+testdisk
 
 parted
 bc

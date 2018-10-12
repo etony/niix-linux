@@ -3,12 +3,15 @@ mate-desktop-environment-core
 #mate-core
 
 #marco
-#mate-control-center
+mate-control-center
 #libmarco-private1
 #mate-desktop
+libglib2.0-dev
+libglib2.0-data
+libglib2.0-bin
 
-
-#caja
+caja
+gvfs-bin
 #gvfs-backends
 #gvfs-daemons
 #policykit-1

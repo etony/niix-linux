@@ -86,7 +86,7 @@ cat /TOOLS/bashrc >>/home/tony/.bashrc
 
 echo "##################Adjust time zone ############"
 
-hwclock --systohc --localtime
+# hwclock --hctosys --localtime 
 
 
 echo "##################Dhcp Client ############"

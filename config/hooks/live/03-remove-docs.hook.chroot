@@ -115,9 +115,10 @@ sed -i '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
 
 echo  "###############Customize timezone###############"
 
-echo "Asia/Shanghai" > /etc/timezone
+# echo "Asia/Shanghai" > /etc/timezone
 
-rm /etc/localtime
+# rm /etc/localtime
 
-cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# echo "UTC=yes" >> /etc/default/rcS
 
