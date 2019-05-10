@@ -1,0 +1,83 @@
+#!/bin/bash
+
+set -e
+
+echo "###############Customized configure###############"
+
+echo "###############Customized xfce4###############"
+
+rm -rf /usr/share/xfce4/backdrops/*
+
+mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
+
+mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
+
+echo "###############Customized SecureCRT###############"
+
+mkdir -p /home/tony/.vandyke/SecureCRT/Config/
+
+mv /TOOLS/SecureCRT.lic /home/tony/.vandyke/SecureCRT/Config/
+
+mv /TOOLS/xfce4-desktop.xml  /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
+
+echo "###############Customized Google Chrome###############"
+
+mv /TOOLS/config/.pki /home/tony/
+
+mv /TOOLS/config/google-chrome /home/tony/.config/
+
+mv /TOOLS/config/smartqq.desktop /usr/share/applications/
+
+echo "###############Customized DNS###############"
+
+echo "prepend domain-name-servers 114.114.114.114; " >> /etc/dhcp/dhclient.conf
+
+cat /TOOLS/hosts >>/etc/hosts
+
+chown -hR tony:tony /home/tony
+
+chmod -R 755 /home/tony/.config
+
+chmod -R 755 /home/tony/.pki
+
+echo "###############Customized net card name###############"
+
+#sed -i "s/eno1/eth0/g" /etc/network/interfaces
+
+#sed -i "s/enp0s3/eth0/g" /etc/network/interfaces
+
+
+#echo  "###############Customize timezone###############"
+##echo "export TZ=\"Asia/Shanghai\"" >> /etc/profile
+
+#echo "Asia/Shanghai" > /etc/timezone
+
+#rm /etc/localtime
+
+#cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+
+echo  "###############Customize user's password###############"
+
+echo "root:tony"|chpasswd
+
+echo "tony:tony"|chpasswd
+
+echo  "###############Customize user's environment variable###############"
+
+cat /TOOLS/bashrc >>/etc/bash.bashrc
+
+cat /TOOLS/bashrc >>/home/tony/.bashrc
+
+echo "##################Adjust time zone ############"
+
+# hwclock --hctosys --localtime 
+
+echo "##################Dhcp Client ############"
+
+/sbin/dhclient
+
+echo "##################OpenSSH Server ##################"
+
+sed -i '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
+sed -i  's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+sed -i -e 's|#\(PermitRootLogin\) yes|\1 yes|' /etc/ssh/sshd_config

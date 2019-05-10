@@ -1,15 +1,28 @@
-BUGS
-	1. 桌面无法自动挂载磁盘分区和U盘
-	2. wps新版本升级提示
-	3. 网卡非eth0
-	4. 时区UTC
-	5. Not authorized to perform operation
 
-2017-4-27
-remove roxterm
-update libssl1.0.0 to libssl1.0.2
-add mrxvt-cjk isc-dhcp-client
-modified 0099-customized-configure.hook to run dhclient
+2019-05-10
+	添加微软字体
+
+2019-05-09
+	更新软件版本
+	切换桌面系统到LXDE
+	切换系统到Debian/buster
+	取消 lantern、wine-qq
+
+2019-04-22
+	更新软件版本
+	google chrome 添加GoogleHelper插件
+	OpenSSH Server 开启密码认证和Root用户登录(/lib/live/config/下hook脚本的执行顺序）
+
+2018-02-01
+	更新软件版本
+	bug#4 解决时区问题
+		调整 hwclock 参数  --hctosys --localtime
+		utc = yes(/etc/default/rcS)
+
+2017-11-1
+	更新软件版本
+	google chrome 添加 Bookmark
+	调整 hwclock 参数 --systohc 为 --hctosys
 
 2016-6-1
 move to amd64
