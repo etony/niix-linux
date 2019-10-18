@@ -26,7 +26,7 @@ mv /TOOLS/config/.pki /home/tony/
 
 mv /TOOLS/config/google-chrome /home/tony/.config/
 
-mv /TOOLS/config/smartqq.desktop /usr/share/applications/
+mv /TOOLS/config/webwechat.desktop /usr/share/applications/
 
 echo "###############Customized DNS###############"
 

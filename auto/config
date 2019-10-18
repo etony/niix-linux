@@ -2,7 +2,7 @@
 
 set -e
 
-_MIRROR_SITE="http://ftp.cn.debian.org/debian/"
+_MIRROR_SITE="http://mirrors.ustc.edu.cn/debian/"
 
 case "$(dpkg --print-architecture)" in
 	amd64)
@@ -20,11 +20,11 @@ lb config noauto \
 	--clean \
 	--ignore-system-defaults \
 	--mode debian \
+  	--apt-indices false \
 	--linux-flavours "${_LINUX_FLAVOURS}" \
 	--linux-packages "linux-image linux-headers" \
-	--bootappend-live "boot=live config splash locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox timezone=Asia/Shanghai" \
-	--bootappend-live-failsafe "boot=live config quiet splash locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
-	--apt-indices false \
+	--bootappend-live "boot=live config locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox timezone=Asia/Shanghai" \
+	--bootappend-live-failsafe "boot=live config quiet  locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
 	--archive-areas "main contrib non-free" \
         --parent-mirror-bootstrap "${_MIRROR_SITE}" \
         --parent-mirror-chroot "${_MIRROR_SITE}" \
@@ -41,9 +41,6 @@ lb config noauto \
 	--iso-publisher "Niix Linux Systems; etony.an@gmail.com" \
 	--iso-application "NiixLinux" \
 	--iso-preparer "NiixBuilder" \
-	--firmware-chroot false \
-	--memtest none \
-	--debootstrap-options "--variant=minbase" \
 	--bootloader syslinux \
 	--distribution sid \
 	--debian-installer live \

@@ -1,19 +1,9 @@
 ##Mate
-mate-desktop-environment-core
-#mate-core
+#mate-desktop-environment-core
+#mate-control-center
+#libglib2.0-dev
+#libglib2.0-data
+#libglib2.0-bin
 
-#marco
-mate-control-center
-#libmarco-private1
-#mate-desktop
-libglib2.0-dev
-libglib2.0-data
-libglib2.0-bin
-
-caja
-gvfs-bin
-#gvfs-backends
-#gvfs-daemons
-#policykit-1
-#libpam-systemd
-#cgmanager
+#caja
+#gvfs-bin

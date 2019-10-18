@@ -1,22 +1,7 @@
-
-##########################################
-debian-installer-launcher
-live-tools
-
-
-
-###apt-utils####
-##libapt-inst1.7
-#libapt-pkg4.16
-#libstdc++6
 ##########################################
 ###X11###
-#gdm3
-lightdm
-
-
-
-
+gdm3
+#lightdm
 
 
 #### auto mount partation or usb device
@@ -29,24 +14,14 @@ lightdm
 #python-dbus-dev
 #python3-dbus 
 
-
-##AweSome
-#awesome
-#awesome-extra
-
-
 ## fluxbox desktop
 #xorg
 #fluxbox
 #openbox
 #lxde-core
 
-
-#automount/eth0
-#sysvinit
-#sysvinit-utils
-
 ##fonts and CIM
+xfonts-utils
 xdg-utils
 xfonts-wqy
 ttf-wqy-zenhei
@@ -64,7 +39,7 @@ fcitx-pinyin
 #nano
 #mrxvt-cjk
 vim
-leafpad
+#leafpad
 evince
 less
 iputils-ping
@@ -84,7 +59,7 @@ mc
 links2 
 w3m
 python3
-python-vte
+#python-vte
 python-openssl
 #iceweasel
 firefox-esr
@@ -146,13 +121,6 @@ xosview
 dstat
 isc-dhcp-client
 
-##lantern
-libappindicator3-1
-
-
-##QQ
-#libnotify-bin
-
 #####graph#####
 imagemagick
 gimp
@@ -191,12 +159,7 @@ gpart
 
 ##ScureCRT#
 libpython2.7
-libssl1.0.2
-##########################################
-###JAVA###
-#openjdk-6-jre
-#dbeaver_2.3.0_i386.deb
-
+libssl1.1
 
 ##########################################
 ##Building dependency tree.
@@ -204,7 +167,7 @@ libssl1.0.2
 perl
 bash
 wget
-partimage
+#partimage
 #ntfsprogs
 ntfs-3g
 
@@ -241,28 +204,10 @@ libxrender1
 libxss1
 libxtst6
 ca-certificates
-libcurl3
+libcurl4
 lsb-base
 xdg-utils
 dpkg
-
-###GoAgent proxy
-python-gevent
-libnss3-tools
-libnss3
-
-###kingsoft-office 
-#libstdc++6
-#libfreetype6
-#libglu1-mesa
-#libcups2
-#libglib2.0-0
-#libsm6
-#libxrender1
-#libfontconfig1
-#libcairo2
-#libcap2
-ttf-mscorefonts-installer
 
 #http://ftp.uni-kl.de/pub/linux/knoppix-dvd/dpkg-l-dvd-742.txt
 
