@@ -28,6 +28,9 @@ mv /TOOLS/config/google-chrome /home/tony/.config/
 
 mv /TOOLS/config/webwechat.desktop /usr/share/applications/
 
+echo "###############Customized WPS Office ###############"
+mv /TOOLS/config/Kingsoft /home/tony/.config/
+
 echo "###############Customized DNS###############"
 
 echo "prepend domain-name-servers 114.114.114.114; " >> /etc/dhcp/dhclient.conf
