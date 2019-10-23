@@ -74,9 +74,14 @@ bc
 net-tools
 pciutils
 
-#clonezilla
-#drbl
-#udpcast
+##### CloneZilla #####
+clonezilla
+drbl
+partclone
+udpcast
+partimage
+##### CloneZilla #####
+
 
 grdesktop
 filezilla
