@@ -3,6 +3,7 @@
 set -e
 
 _MIRROR_SITE="http://mirrors.ustc.edu.cn/debian/"
+_MIRROR_SECURITY="http://mirrors.ustc.edu.cn/debian-security/"
 
 case "$(dpkg --print-architecture)" in
 	amd64)
@@ -35,6 +36,8 @@ lb config noauto \
         --mirror-binary "${_MIRROR_SITE}" \
         --mirror-debian-installer "${_MIRROR_SITE}" \
         --mirror-bootstrap "${_MIRROR_SITE}" \
+		--mirror-binary-security "${_MIRROR_SECURITY}" \
+		--mirror-chroot-security "${_MIRROR_SECURITY}" \
 	--source "${_SOURCE}" \
 	--archive-areas "main contrib" \
 	--iso-volume "NiixLinux" \
@@ -44,28 +47,4 @@ lb config noauto \
 	--bootloader syslinux \
 	--distribution sid \
 	--debian-installer live \
-"${@}"
-
-
-#	
-
-
-#	
-#       --distribution sid \
-#	--apt-recommends false \
-#	--debian-installer live \
-#	
-#        --parent-mirror-chroot-updates "http://mirrors.sohu.com/debian/" \
-#        --parent-mirror-chroot-backports "http://debian.ustc.edu.cn/debian/" \
-#        --mirror-binary-updates "http://debian.ustc.edu.cn/debian/" \
-#        --mirror-binary-backports "http://debian.ustc.edu.cn/debian/" \
-#        --mirror-chroot-updates "http://debian.ustc.edu.cn/debian/" \
-#        --mirror-chroot-backports "http://debian.ustc.edu.cn/debian/" \
-#        --parent-mirror-binary-updates "http://debian.ustc.edu.cn/debian/" \
-#        --parent-mirror-binary-backports "http://debian.ustc.edu.cn/debian/" \
-#	 --hooks "minimal" \
-#	debian.ustc.edu.cn
-#	mirrors.sohu.com
-#ftp.tw.debian.org
-#ftp://ftp.cn.debian.org
-#http://mirrors.aliyun.com/debian/
+	"${@}"

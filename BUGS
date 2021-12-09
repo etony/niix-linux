@@ -1,8 +1,6 @@
-﻿2019-10-18
-	切换Clonezilla问题版本。
-
-2019-10-18
-	更新软件版本
+﻿2021-12-09
+	迁移平台由 华为 FusionCompute 到 Oracle VM VirtualBox
+	调整配置参数，清理 desktop.list.chroot 配置内容
 	
 2019-05-11
 	清理无用文件及配置

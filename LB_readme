@@ -270,3 +270,64 @@ HOOKS
 
 	引导脚本
 		/lib/live/config/
+		
+		
+		
+		
+		
+https://www.cnblogs.com/varden/p/13925972.html
+https://live-team.pages.debian.net/live-manual/html/live-manual/managing-a-configuration.en.html
+https://www.cnblogs.com/varden/p/13939898.html
+https://www.ubuntukylin.com/ukylin/forum.php?mod=viewthread&tid=20		
+
+
+
+
+用于镜像创建时的安装源：
+
+--mirror-bootstrap http://ftp.cn.debian.org/debian/
+--mirror-chroot-security http://ftp.cn.debian.org/debian-security/
+
+用于镜像运行时的安装源：
+
+--mirror-binary http://ftp.cn.debian.org/debian/
+--mirror-binary-security http://ftp.cn.debian.org/debian-security/
+--mirror-binary-backports http://ftp.cn.debian.org/debian-backports/
+
+添加到config/archives/live.list.chroot文件内的安装源在创建镜像时被使用。
+添加到config/archives/live.list.binary文件内的安装源会被加入到系统/etc/apt/sources.list.d/目录。
+两个文件内容格式如下：
+
+deb http://debian-live.alioth.debian.org/ sid-snapshots main contrib non-free
+
+调整APT节省空间:（可能会带来一些问题）
+
+# 禁用缓存软件索引
+--apt-indices false
+# 禁用APT推荐功能
+--apt-recommends false
+
+
+Hooks
+包含系统创建完后需要执行的脚本。
+/usr/share/doc/live-build/examples/hooks
+
+config/hooks/
+	*.hook.chroot
+	*.hook.binary
+
+/lib/live/config/ --> config/includes.chroot/lib/live/config/
+
+
+更改默认密码方法(启动时设置用户名密码)：
+
+passwd: /usr/share/doc/live-config/examples/hooks --> config/includes.chroot/lib/live/config/
+
+小结：
+1.自动配置脚本目录：auto/config
+2.创建镜像时安装的软件所在目录：config/package-lists/
+3.自定义镜像内容目录：config/includes.chroot/
+4.创建系统后执行的脚本所在目录：config/hooks/
+5.自定义引导程序目录：config/bootloaders/
+6.自定义Debian Installer：使用--debian-installer live选项，安装debian-installer-launcher包
+7.自定义Debian Installer的内容：config/packages.binary/，config/includes.installer/

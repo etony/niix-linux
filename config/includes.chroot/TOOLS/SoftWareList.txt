@@ -5,3 +5,4 @@ partclone_0.2.73.drbl2_i386.deb			http://partclone.org/
 wps-office_9.1.3_i386.deb			http://linux.wps.cn/		
 google-chrome-stable_40.0.2214.93-1_i386.deb 	https://www.google.com/chrome/intl/en/eula_dev.html?dl=unstable_i386_deb		
  	       
+https://free.nchc.org.tw/drbl-core/pool/drbl/

@@ -1,0 +1,254 @@
+*PPD-Adobe: "4.3"
+*FormatVersion: "4.3"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*FileVersion: "10000.0000"
+*% Linux Version
+
+*Manufacturer: "KONICA MINOLTA"
+*ModelName: "KONICA MINOLTA 423Series OpenOffice PPD"
+*ShortNickName: "KONICA MINOLTA 423"
+*NickName: "KONICA MINOLTA 423Series OpenOffice PPD"
+*PCFileName: "KO423opn.ppd"
+*Product: "(KONICA MINOLTA 423)"
+*PSVersion: "(3016.102) 1"
+
+*% === Device Capabilities ============
+*LanguageLevel: "3"
+
+*ColorDevice: True
+*DefaultColorSpace: CMYK
+
+*Protocols: TBCP
+
+*OpenUI *PageSize/Paper Size: PickOne
+*OrderDependency: 60 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize A3/A3:  "<< /PageSize [842 1191] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize A4/A4:  "<< /PageSize [595 842] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize A5/A5:  "<< /PageSize [420 595] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize A6/A6:  "<< /PageSize [297 420] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize B4/B4:  "<< /PageSize [729 1032] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize B5/B5:  "<< /PageSize [516 729] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize B6/B6:  "<< /PageSize [363 516] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 220mmx330mm/220mmx330mm:  "<< /PageSize [624 935] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize Tabloid/11x17:  "<< /PageSize [792 1224] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize Legal/8 1/2x14:  "<< /PageSize [612 1008] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize Letter/8 1/2x11:  "<< /PageSize [612 792] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize Statement/5 1/2x8 1/2:  "<< /PageSize [396 612] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 8x13/8x13:  "<< /PageSize [576 936] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 8.5x13/8 1/2x13:  "<< /PageSize [612 936] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 8.5x13.5/8 1/2x13 1/2:  "<< /PageSize [612 972] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 8.25x13/8 1/4x13:  "<< /PageSize [594 936] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 8.125x13.25/8 1/8x13 1/4:  "<< /PageSize [585 954] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize Executive/7 1/4x10 1/2:  "<< /PageSize [522 756] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 8K/8K:  "<< /PageSize [765 1105] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 16K/16K:  "<< /PageSize [553 765] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize EnvISOB5/Envelope B5:  "<< /PageSize [499 709] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize EnvC5/Envelope C5:  "<< /PageSize [459 649] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize EnvDL/Envelope DL:  "<< /PageSize [312 624] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize EnvMonarch/Envelope Monarch:  "<< /PageSize [279 540] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize Env10/Envelope Com10:  "<< /PageSize [297 684] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize JapanesePostCard/Postcard:  "<< /PageSize [284 419] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageSize 4x6_PostCard/4x6 Postcard:  "<< /PageSize [288 432] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 60 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion A3/A3:  "<< /PageSize [842 1191] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion A4/A4:  "<< /PageSize [595 842] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion A5/A5:  "<< /PageSize [420 595] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion A6/A6:  "<< /PageSize [297 420] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion B4/B4:  "<< /PageSize [729 1032] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion B5/B5:  "<< /PageSize [516 729] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion B6/B6:  "<< /PageSize [363 516] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 220mmx330mm/220mmx330mm:  "<< /PageSize [624 935] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion Tabloid/11x17:  "<< /PageSize [792 1224] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion Legal/8 1/2x14:  "<< /PageSize [612 1008] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion Letter/8 1/2x11:  "<< /PageSize [612 792] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion Statement/5 1/2x8 1/2:  "<< /PageSize [396 612] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 8x13/8x13:  "<< /PageSize [576 936] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 8.5x13/8 1/2x13:  "<< /PageSize [612 936] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 8.5x13.5/8 1/2x13 1/2:  "<< /PageSize [612 972] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 8.25x13/8 1/4x13:  "<< /PageSize [594 936] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 8.125x13.25/8 1/8x13 1/4:  "<< /PageSize [585 954] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion Executive/7 1/4x10 1/2:  "<< /PageSize [522 756] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 8K/8K:  "<< /PageSize [765 1105] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 16K/16K:  "<< /PageSize [553 765] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion EnvISOB5/Envelope B5:  "<< /PageSize [499 709] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion EnvC5/Envelope C5:  "<< /PageSize [459 649] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion EnvDL/Envelope DL:  "<< /PageSize [312 624] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion EnvMonarch/Envelope Monarch:  "<< /PageSize [279 540] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion Env10/Envelope Com10:  "<< /PageSize [297 684] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion JapanesePostCard/Postcard:  "<< /PageSize [284 419] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*PageRegion 4x6_PostCard/4x6 Postcard:  "<< /PageSize [288 432] /ImagingBBox null >> setpagedevice
+ << /WideMode false /FullBleed false >> /KMOptions /ProcSet findresource /setKMoptions get exec"
+*End
+*CloseUI: *PageRegion
+
+*DefaultPaperDimension: Letter
+*PaperDimension A3/A3:  "842 1191"
+*PaperDimension A4/A4:  "595 842"
+*PaperDimension A5/A5:  "420 595"
+*PaperDimension A6/A6:  "297 420"
+*PaperDimension B4/B4:  "729 1032"
+*PaperDimension B5/B5:  "516 729"
+*PaperDimension B6/B6:  "363 516"
+*PaperDimension 220mmx330mm/220mmx330mm:  "624 935"
+*PaperDimension Tabloid/11x17:  "792 1224"
+*PaperDimension Legal/8 1/2x14:  "612 1008"
+*PaperDimension Letter/8 1/2x11:  "612 792"
+*PaperDimension Statement/5 1/2x8 1/2:  "396 612"
+*PaperDimension 8x13/8x13:  "576 936"
+*PaperDimension 8.5x13/8 1/2x13:  "612 936"
+*PaperDimension 8.5x13.5/8 1/2x13 1/2:  "612 972"
+*PaperDimension 8.25x13/8 1/4x13:  "594 936"
+*PaperDimension 8.125x13.25/8 1/8x13 1/4:  "585 954"
+*PaperDimension Executive/7 1/4x10 1/2:  "522 756"
+*PaperDimension 8K/8K:  "765 1105"
+*PaperDimension 16K/16K:  "553 765"
+*PaperDimension EnvISOB5/Envelope B5:  "499 709"
+*PaperDimension EnvC5/Envelope C5:  "459 649"
+*PaperDimension EnvDL/Envelope DL:  "312 624"
+*PaperDimension EnvMonarch/Envelope Monarch:  "279 540"
+*PaperDimension Env10/Envelope Com10:  "297 684"
+*PaperDimension JapanesePostCard/Postcard:  "284 419"
+*PaperDimension 4x6_PostCard/4x6 Postcard:  "288 432"
+
+*DefaultImageableArea: Letter
+*ImageableArea A3/A3:  "12 12 830 1179"
+*ImageableArea A4/A4:  "12 12 583 830"
+*ImageableArea A5/A5:  "12 12 408 583"
+*ImageableArea A6/A6:  "12 12 285 408"
+*ImageableArea B4/B4:  "12 12 717 1020"
+*ImageableArea B5/B5:  "12 12 504 717"
+*ImageableArea B6/B6:  "12 12 351 504"
+*ImageableArea 220mmx330mm/220mmx330mm:  "12 12 612 923"
+*ImageableArea Tabloid/11x17:  "12 12 780 1212"
+*ImageableArea Legal/8 1/2x14:  "12 12 600 996"
+*ImageableArea Letter/8 1/2x11:  "12 12 600 780"
+*ImageableArea Statement/5 1/2x8 1/2:  "12 12 384 600"
+*ImageableArea 8x13/8x13:  "12 12 564 924"
+*ImageableArea 8.5x13/8 1/2x13:  "12 12 600 924"
+*ImageableArea 8.5x13.5/8 1/2x13 1/2:  "12 12 600 960"
+*ImageableArea 8.25x13/8 1/4x13:  "12 12 582 924"
+*ImageableArea 8.125x13.25/8 1/8x13 1/4:  "12 12 573 942"
+*ImageableArea Executive/7 1/4x10 1/2:  "12 12 510 744"
+*ImageableArea 8K/8K:  "12 12 753 1093"
+*ImageableArea 16K/16K:  "12 12 541 753"
+*ImageableArea EnvISOB5/Envelope B5:  "12 12 487 697"
+*ImageableArea EnvC5/Envelope C5:  "12 12 447 637"
+*ImageableArea EnvDL/Envelope DL:  "12 12 300 612"
+*ImageableArea EnvMonarch/Envelope Monarch:  "12 12 267 528"
+*ImageableArea Env10/Envelope Com10:  "12 12 285 672"
+*ImageableArea JapanesePostCard/Postcard:  "12 12 272 407"
+*ImageableArea 4x6_PostCard/4x6 Postcard:  "12 12 276 420"
+
+*% end of PPD
