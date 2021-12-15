@@ -1,2 +1,0 @@
-
-root@tonybox:/home/tony/.config/awesome# convert -resize 16x16 /usr/share/icons/gnome/16x16/apps/terminal.png terminal.xpm
