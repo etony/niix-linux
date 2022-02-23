@@ -1,7 +1,7 @@
 ##########################################
-###X11###
+###Display###
 #gdm3
-#lightdm
+#lightdm #default
 
 ##fonts and CIM
 xfonts-utils
@@ -10,6 +10,7 @@ xfonts-wqy
 ttf-wqy-zenhei
 ttf-wqy-microhei
 fcitx-pinyin
+
 ##########################################
 ###Tools###
 vim
@@ -17,8 +18,11 @@ evince
 less
 iputils-ping
 
+##file manager
 rox-filer 
-file-roller 
+
+## compress uncompress
+file-roller
 p7zip-full
 bzip2
 #unrar-free 
@@ -32,18 +36,20 @@ mc
 links2 
 w3m
 python3
-#python-vte
 python3-openssl
-#iceweasel
 firefox-esr
 
+##hard disk tools
+gpart
 gparted
 smartmontools
 testdisk
-
 parted
+
+#Calculator
 bc
-net-tools
+
+#hardware info
 pciutils
 
 ##### CloneZilla #####
@@ -52,15 +58,26 @@ drbl
 partclone
 udpcast
 partimage
-##### CloneZilla #####
+perl
+ntfs-3g
 
 
+
+#remote desktop
 grdesktop
+
+#ftp
 filezilla
+
+#IP Messenger
 iptux
+
+#download
 axel
+wget
 
-
+#network tools
+net-tools
 traceroute
 mtr
 socat
@@ -78,6 +95,8 @@ screen
 tmux
 lshw-gtk 
 inxi
+ipcalc
+wakeonlan
 #https://linux.cn/article-4347-1-rel.html
 
 
@@ -101,18 +120,14 @@ isc-dhcp-client
 imagemagick
 gimp
 gthumb
-
-
-vlc
 xchm
 
 ##########################################
 ###SECURITY###
-
 sudo
 openssh-server
 tcpdump
-wireshark
+#wireshark
 chntpw
 nmap
 zmap
@@ -120,52 +135,11 @@ lsof
 hping3
 whatweb
 task-ssh-server
-
 ncat
-
 dnsutils
 dnstracer
-
-#w3af
 sqlmap
 
-testdisk 
-gpart
 
-
-##########################################
-##Building dependency tree.
-###clonezilla
-perl
-#bash
-wget
-#partimage
-#ntfsprogs
-ntfs-3g
-
-###drbl
-ipcalc
-wakeonlan
 syslinux
-
-####google-chrome-stable 
-libasound2
-libatk1.0
-libcups2
-libdbus-1-3
-libexpat1
-#libgcc1
-libglib2.0-0
-libnspr4
-libx11-6
-libxcomposite1
-libxdamage1
-libxext6
-libxfixes3
-ca-certificates
-libcurl4
-xdg-utils
-dpkg
-
 #http://ftp.uni-kl.de/pub/linux/knoppix-dvd/dpkg-l-dvd-742.txt
-
