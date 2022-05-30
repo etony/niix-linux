@@ -9,9 +9,7 @@ apt-get -y autoremove
 
 apt-get -y clean 
 
-#echo "############### Removing unused files###############" 
 
-#find . -name *~ -print0 | xargs -0 rm -f
  
 echo "###############remove temporary files###############" 
 rm -rf /var/cache/flash*
@@ -24,7 +22,7 @@ rm -rf /usr/share/doc-base/*
 find . -name *~ -print0 | xargs -0 rm -f
 
 rm -rf /usr/include/*
-rm -rf /usr/share/i18n/*
+# rm -rf /usr/share/i18n/* ##终端中文输入问题
 rm -rf /usr/share/info/*
 rm -rf /usr/share/lintian/*
 rm -rf /usr/share/linda/*
@@ -43,33 +41,37 @@ rm -rf /var/cache/apt/*.bin
 
  
 echo "###############remove localization information###############"
+#删除除了zh_CN之外的所有本地化信息
 
-locale-gen
+/usr/sbin/locale-gen
  
 if cd /usr/share/locale;then
 ls -1|grep -v zh_CN|grep -v locale|xargs rm -rf "{}"
 fi
+
  
-#删除除了zh_CN之外的所有本地化信息
- 
+
+#删除不常用的驱动 
 echo "###############remove some driver###############"
 rm -rf /lib/modules/*/kernel/drivers/isdn
 rm -rf /lib/modules/*/kernel/drivers/media
-#删除不常用的驱动
+
 
 
 #刷新字体
 echo "###############fresh xfonts###############"
+# 已使用 wps-symbol-fonts_1.0.1_all.deb 安装字体
 
-mkdir /usr/share/fonts/truetype/msfonts
+#mkdir /usr/share/fonts/truetype/msfonts
 
-cp /TOOLS/fonts/* /usr/share/fonts/truetype/msfonts
+#cp /TOOLS/fonts/* /usr/share/fonts/truetype/msfonts
 
-mkfontscale & mkfontdir
+#mkfontscale & mkfontdir
 
-fc-cache -fv
+#fc-cache -fv
 
 #更新DNS resolv.conf
+#使用启动脚本进行配置
 
 # echo "nameserver 114.114.114.114 " > /etc/resolv.conf 
 # echo "nameserver 202.98.192.67 " >> /etc/resolv.conf 
@@ -88,14 +90,6 @@ echo "############### conifgure opensshserver  ###############"
 sed -i 's/prohibit-password/yes/g' /etc/ssh/sshd_config
 sed -i '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
 
-echo  "###############Customize timezone###############"
-
-# echo "Asia/Shanghai" > /etc/timezone
-
-# rm /etc/localtime
-
-# cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-# echo "UTC=yes" >> /etc/default/rcS
 echo  "###############Customize Background###############"
 cp /TOOLS/background.svg /usr/share/desktop-base/active-theme/wallpaper/contents/images/1920x1080.svg
 

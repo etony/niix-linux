@@ -1,4 +1,9 @@
-﻿2021-12-09
+﻿2022-05-30
+	移除debian-installer，不再支持光盘安装
+	添加中文字体，通过wps-symbol-fonts_1.0.1_all.deb包实现
+	调整config配置
+
+2021-12-09
 	迁移平台由 华为 FusionCompute 到 Oracle VM VirtualBox
 	调整配置参数，清理 desktop.list.chroot 配置内容
 	

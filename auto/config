@@ -2,8 +2,8 @@
 
 set -e
 
-_MIRROR_SITE="http://mirrors.ustc.edu.cn/debian/"
-_MIRROR_SECURITY="http://mirrors.ustc.edu.cn/debian-security/"
+_MIRROR_SITE="http://mirrors.huaweicloud.com/debian/"
+_MIRROR_SECURITY="http://mirrors.huaweicloud.com/debian-security/"
 
 case "$(dpkg --print-architecture)" in
 	amd64)
@@ -21,7 +21,6 @@ lb config noauto \
 	--clean \
 	--ignore-system-defaults \
 	--mode debian \
-  	--apt-indices false \
 	--linux-flavours "${_LINUX_FLAVOURS}" \
 	--linux-packages "linux-image linux-headers" \
 	--bootappend-live "boot=live config locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox timezone=Asia/Shanghai" \
@@ -39,12 +38,16 @@ lb config noauto \
 		--mirror-binary-security "${_MIRROR_SECURITY}" \
 		--mirror-chroot-security "${_MIRROR_SECURITY}" \
 	--source "${_SOURCE}" \
-	--archive-areas "main contrib" \
 	--iso-volume "NiixLinux" \
 	--iso-publisher "Niix Linux Systems; etony.an@gmail.com" \
 	--iso-application "NiixLinux" \
 	--iso-preparer "NiixBuilder" \
 	--bootloader syslinux \
-	--distribution sid \
-	--debian-installer live \
+	--distribution bookworm \
 	"${@}"
+	
+##	--debian-installer live \ #DebianInstaller通常用于安装stable版，如需sid版，通常通过更改 /etc/apt/sources.list 后升级到sid版
+##	--debian-installer-distribution bookworm \	
+### 	--debian-installer netinst|live \ 仅适用于stable发行版
+###	--apt-recommends false ##无法安装第三方软件
+###--apt-indices false \ ####Unable to locate package squashfs-tools

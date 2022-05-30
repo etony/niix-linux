@@ -12,13 +12,14 @@ mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
 
 mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
-echo "###############Customized SecureCRT###############"
+## 已取消该软件包安装
+##echo "###############Customized SecureCRT###############"
 
-mkdir -p /home/tony/.vandyke/SecureCRT/Config/
+##mkdir -p /home/tony/.vandyke/SecureCRT/Config/
 
-mv /TOOLS/SecureCRT.lic /home/tony/.vandyke/SecureCRT/Config/
+##mv /TOOLS/SecureCRT.lic /home/tony/.vandyke/SecureCRT/Config/
 
-mv /TOOLS/xfce4-desktop.xml  /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
+##mv /TOOLS/xfce4-desktop.xml  /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 echo "###############Customized Google Chrome###############"
 
@@ -79,7 +80,7 @@ echo "##################Dhcp Client ############"
 
 /sbin/dhclient
 
-echo "##################OpenSSH Server ##################"
+echo "################## Customize OpenSSH Server ##################"
 
 sed -i '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
 sed -i  's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
