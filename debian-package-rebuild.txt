@@ -1,0 +1,13 @@
+mkdir -p extract/DEBIAN
+mkdir build
+
+dpkg-deb -x ../package.deb extract/
+dpkg-deb -e ../package.deb extract/DEBIAN 
+
+[...do something, e.g. edit the control file...]
+
+dpkg-deb -b extract/ build/
+
+
+
+http://mirror.retrosnub.co.uk/googlechrome/pool/main/g/google-chrome-stable/
