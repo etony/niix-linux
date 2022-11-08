@@ -101,7 +101,6 @@ wakeonlan
 
 #https://linux.cn/article-6987-1.html
 htop
-atop
 powertop
 #ntopng
 iftop
