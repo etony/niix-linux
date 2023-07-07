@@ -1,9 +1,8 @@
 ##########################################
-###Display###
-#gdm3
+###display manager（DM）###
 #lightdm #default
 
-##fonts and CIM
+###fonts and CIM###
 xfonts-utils
 xdg-utils
 xfonts-wqy
@@ -17,10 +16,10 @@ evince
 less
 iputils-ping
 
-##file manager
+### file manager
 rox-filer 
 
-## compress uncompress
+### compress uncompress
 file-roller
 p7zip-full
 bzip2
@@ -60,10 +59,9 @@ partimage
 perl
 ntfs-3g
 
-
-
 #remote desktop
 grdesktop
+remmina
 
 #ftp
 filezilla
@@ -126,7 +124,7 @@ xchm
 sudo
 openssh-server
 tcpdump
-#wireshark
+wireshark
 chntpw
 nmap
 zmap
@@ -144,5 +142,5 @@ libglu1-mesa
 syslinux
 #http://ftp.uni-kl.de/pub/linux/knoppix-dvd/dpkg-l-dvd-742.txt
 
-#wps
+### GTK+ based terminal
 tilda
