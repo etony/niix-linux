@@ -63,11 +63,8 @@ echo "###############fresh xfonts###############"
 # 已使用 wps-symbol-fonts_1.0.1_all.deb 安装字体
 
 #mkdir /usr/share/fonts/truetype/msfonts
-
 #cp /TOOLS/fonts/* /usr/share/fonts/truetype/msfonts
-
 #mkfontscale & mkfontdir
-
 #fc-cache -fv
 
 #更新DNS resolv.conf

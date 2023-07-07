@@ -2,8 +2,8 @@
 
 set -e
 
-_MIRROR_SITE="http://mirrors.huaweicloud.com/debian/"
-_MIRROR_SECURITY="http://mirrors.huaweicloud.com/debian-security/"
+_MIRROR_SITE="http://mirrors.aliyun.com/debian/"
+_MIRROR_SECURITY="http://mirrors.aliyun.com/debian-security/"
 
 case "$(dpkg --print-architecture)" in
 	amd64)
@@ -25,7 +25,7 @@ lb config noauto \
 	--linux-packages "linux-image linux-headers" \
 	--bootappend-live "boot=live config locales=zh_CN.UTF-8 username=tony user-fullname=tony hostname=tonybox timezone=Asia/Shanghai" \
 	--bootappend-live-failsafe "boot=live config quiet  locales=zh_CN.UTF-8 username=tony hostname=tonybox" \
-	--archive-areas "main contrib non-free" \
+	--archive-areas "main contrib non-free non-free-firmware" \
         --parent-mirror-bootstrap "${_MIRROR_SITE}" \
         --parent-mirror-chroot "${_MIRROR_SITE}" \
         --parent-mirror-binary "${_MIRROR_SITE}" \
@@ -43,7 +43,7 @@ lb config noauto \
 	--iso-application "NiixLinux" \
 	--iso-preparer "NiixBuilder" \
 	--bootloader syslinux \
-	--distribution bookworm \
+	--distribution sid \
 	"${@}"
 	
 ##	--debian-installer live \ #DebianInstaller通常用于安装stable版，如需sid版，通常通过更改 /etc/apt/sources.list 后升级到sid版

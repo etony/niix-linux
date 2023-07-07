@@ -12,25 +12,10 @@ mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
 
 mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
-## 已取消该软件包安装
-##echo "###############Customized SecureCRT###############"
 
-##mkdir -p /home/tony/.vandyke/SecureCRT/Config/
 
-##mv /TOOLS/SecureCRT.lic /home/tony/.vandyke/SecureCRT/Config/
+# mv /TOOLS/config/webwechat.desktop /usr/share/applications/
 
-##mv /TOOLS/xfce4-desktop.xml  /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
-
-echo "###############Customized Google Chrome###############"
-
-mv /TOOLS/config/.pki /home/tony/
-
-mv /TOOLS/config/google-chrome /home/tony/.config/
-
-mv /TOOLS/config/webwechat.desktop /usr/share/applications/
-
-echo "###############Customized WPS Office ###############"
-mv /TOOLS/config/Kingsoft /home/tony/.config/
 
 echo "###############Customized DNS###############"
 
@@ -40,9 +25,6 @@ cat /TOOLS/hosts >>/etc/hosts
 
 chown -hR tony:tony /home/tony
 
-chmod -R 755 /home/tony/.config
-
-chmod -R 755 /home/tony/.pki
 
 echo "###############Customized net card name###############"
 
