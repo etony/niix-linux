@@ -1,13 +1,10 @@
-galculator
-gpicview
-mousepad
-lxappearance
-lxappearance-obconf
-lxde-core
-lxde-icon-theme
-lxhotkey-gtk
-lxinput
-lxrandr
-lxsession-edit
-lxterminal
-xarchiver
+# mousepad #轻量级记事本 
+# lxappearance #PCMan 为 LXDE 而开发的一个全新的 GTK+ 主题更换工具
+# lxappearance-obconf
+# lxde-core
+# lxde-icon-theme
+# lxhotkey-gtk
+# lxinput #LXDE的键盘和鼠标配置工具
+# lxrandr #LXDE的显示器配置工具
+# lxsession-edit
+# lxterminal #LXDE 终端模拟器

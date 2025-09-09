@@ -6,13 +6,11 @@ echo "###############Customized configure###############"
 
 echo "###############Customized xfce4###############"
 
-rm -rf /usr/share/xfce4/backdrops/*
+# rm -rf /usr/share/xfce4/backdrops/*
 
-mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
+# mv /TOOLS/xfce-stripes.png /usr/share/xfce4/backdrops/
 
-mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
-
-
+# mkdir -p /home/tony/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 # mv /TOOLS/config/webwechat.desktop /usr/share/applications/
 
@@ -23,7 +21,7 @@ echo "prepend domain-name-servers 114.114.114.114; " >> /etc/dhcp/dhclient.conf
 
 cat /TOOLS/hosts >>/etc/hosts
 
-chown -hR tony:tony /home/tony
+
 
 
 echo "###############Customized net card name###############"
@@ -44,9 +42,9 @@ echo "###############Customized net card name###############"
 
 echo  "###############Customize user's password###############"
 
-echo "root:tony"|chpasswd
+echo "root:tony"|/usr/sbin/chpasswd
 
-echo "tony:tony"|chpasswd
+echo "tony:tony"|/usr/sbin/chpasswd
 
 echo  "###############Customize user's environment variable###############"
 
@@ -67,3 +65,10 @@ echo "################## Customize OpenSSH Server ##################"
 sed -i '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
 sed -i  's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 sed -i -e 's|#\(PermitRootLogin\) yes|\1 yes|' /etc/ssh/sshd_config
+
+echo "################## Customize WPS Office ##################"
+mkdir -p /home/tony/.config/Kingsoft
+mv /TOOLS/Office.conf /home/tony/.config/Kingsoft/
+chown -hR tony:tony /home/tony
+
+echo "################## END ##################"

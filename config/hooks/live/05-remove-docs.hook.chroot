@@ -1,0 +1,92 @@
+#!/bin/sh
+
+#set -e
+
+echo "###############remove unused packages###############"
+ 
+#apt-get -y autoremove ||true
+apt-get -y autoremove
+
+apt-get -y clean 
+
+
+ 
+echo "###############remove temporary files###############" 
+rm -rf /var/cache/flash*
+
+
+echo "###############remvoe all docs###############"
+rm -rf /usr/share/doc/*
+rm -rf /usr/share/doc-base/*
+
+find . -name *~ -print0 | xargs -0 rm -f
+
+rm -rf /usr/include/*
+# rm -rf /usr/share/i18n/* ##终端中文输入问题
+rm -rf /usr/share/info/*
+rm -rf /usr/share/lintian/*
+rm -rf /usr/share/linda/*
+#rm -rf /usr/share/zoneinfo/*
+find /usr/share/zoneinfo/* -maxdepth 1 ! -name "Shanghai" -delete
+
+echo "###############remove all man docs###############"
+rm -rf /usr/share/man/*
+rm -rf /var/cache/man/*
+ 
+echo "###############remove apt lists###############"
+rm -rf /var/lib/apt/lists/*
+ 
+echo "###############remove apt cache###############"
+rm -rf /var/cache/apt/*.bin
+
+ 
+echo "###############remove localization information###############"
+#删除除了zh_CN之外的所有本地化信息
+
+/usr/sbin/locale-gen
+ 
+if cd /usr/share/locale;then
+ls -1|grep -v zh_CN|grep -v locale|xargs rm -rf "{}"
+fi
+
+ 
+
+#删除不常用的驱动 
+echo "###############remove some driver###############"
+rm -rf /lib/modules/*/kernel/drivers/isdn
+#rm -rf /lib/modules/*/kernel/drivers/media
+
+
+
+#刷新字体
+echo "###############fresh xfonts###############"
+# 已使用 wps-symbol-fonts_1.0.1_all.deb 安装字体
+
+#mkdir /usr/share/fonts/truetype/msfonts
+#cp /TOOLS/fonts/* /usr/share/fonts/truetype/msfonts
+#mkfontscale & mkfontdir
+#fc-cache -fv
+
+#更新DNS resolv.conf
+#使用启动脚本进行配置
+
+# echo "nameserver 114.114.114.114 " > /etc/resolv.conf 
+# echo "nameserver 202.98.192.67 " >> /etc/resolv.conf 
+
+echo "###############disable net card eth0 to enp0s3###############"
+
+ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
+
+echo "###############configure polkit to auto mount partations###############"
+
+cp /TOOLS/50-filesystem-mount-system-internal.pkla /etc/polkit-1/localauthority/50-local.d/ 
+cp /TOOLS/50-allow-everything.pkla /etc/polkit-1/localauthority/50-local.d/ 
+
+echo "############### conifgure opensshserver  ###############"
+
+sed -i 's/prohibit-password/yes/g' /etc/ssh/sshd_config
+sed -i '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
+
+echo  "###############Customize Background###############"
+cp /TOOLS/background.svg /usr/share/desktop-base/active-theme/wallpaper/contents/images/1920x1080.svg
+
